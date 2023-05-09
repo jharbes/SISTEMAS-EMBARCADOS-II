@@ -1,0 +1,7 @@
+#include <18F4520.h>
+#device ADC=10// essa linha foi gerada pelo Code Wizard, mas é desnecessária
+
+#FUSES NOWDT//No Watch Dog Timer // essa linha foi gerada pelo Code Wizard, mas é desnecessária
+
+#use delay(internal=8MHz,restart_wdt)// o "restart_wdt" foi gerado pelo Code Wizard, mas é desnecessário
+

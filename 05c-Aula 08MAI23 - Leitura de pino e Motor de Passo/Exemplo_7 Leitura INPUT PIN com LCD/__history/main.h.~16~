@@ -1,0 +1,41 @@
+#include <18F4520.h>
+#use delay(internal=8MHz)
+
+// definições dos pinos do LCD (podem ser utilizados vários tipos de LCD de 
+// duas linhas: 16x2; 20x2; 40x2, etc.)
+
+// Configuração utilizando pinos de uma ou mais portas
+//!#define LCD_ENABLE_PIN PIN_D0
+//!#define LCD_RS_PIN PIN_D1
+//!#define LCD_RW_PIN PIN_D2
+//!#define LCD_DATA4 PIN_D4
+//!#define LCD_DATA5 PIN_D5
+//!#define LCD_DATA6 PIN_D6
+//!#define LCD_DATA7 PIN_D7
+
+// Configuração utilizando pinos de uma única porta nessa ordem
+// (pode ser alterada em lcd.c linha 80, alterando a struct LCD_PIN_MAP)
+//#define LCD_DATA_PORT getenv("SFR:PORTC")  // LCD em PORTC 
+
+// LCD_ENABLE_PIN  PIN_C0
+// LCD_RS_PIN      PIN_C1  
+// LCD_RW_PIN      PIN_C2 
+// Não conectado	 PIN_C3
+// LCD_DATA4       PIN_C4
+// LCD_DATA5       PIN_C5
+// LCD_DATA6       PIN_C6
+// LCD_DATA7       PIN_C7
+
+#define LCD_DATA_PORT getenv("SFR:PORTD")  // LCD em PORTD 
+// LCD_ENABLE_PIN  PIN_D0
+// LCD_RS_PIN      PIN_D1  
+// LCD_RW_PIN      PIN_D2
+// Não conectado	 PIN_D3
+// LCD_DATA4       PIN_D4
+// LCD_DATA5       PIN_D5
+// LCD_DATA6       PIN_D6
+// LCD_DATA7       PIN_D7
+
+
+#define LCD_EXTENDED_NEWLINE
+

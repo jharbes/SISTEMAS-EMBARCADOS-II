@@ -1,0 +1,73 @@
+#include <STEP_MOTOR.h>
+
+void gira_direita( int16 pulso, int16 giros);// considerou-se 90 graus cada step
+void gira_esquerda( int16 pulso, int16 giros);// cada giro equivale a uma sequência
+																							// de 4 pulsos
+
+void main()
+{
+	setup_adc_ports(NO_ANALOGS, VSS_VDD);
+
+output_low(PIN_D0);
+output_low(PIN_D1);
+output_low(PIN_D2);
+output_low(PIN_D3);
+delay_ms(1000);
+
+	while(TRUE)
+	{
+	gira_direita( 500, 2);
+	delay_ms(1000);
+	gira_esquerda(500, 2);
+	delay_ms(1000); 	
+	}
+
+}
+
+void gira_direita( int16 pulso, int16 giros){
+
+int16 i;
+
+for(i=0; i<giros; i++){
+
+	output_high(PIN_D0);
+	delay_ms(pulso);
+	output_low(PIN_D0);
+ 	
+	output_high(PIN_D1);
+	delay_ms(pulso);
+	output_low(PIN_D1);
+ 	
+	output_high(PIN_D2);
+	delay_ms(pulso);
+	output_low(PIN_D2);
+ 	
+	output_high(PIN_D3);
+	delay_ms(pulso);
+	output_low(PIN_D3);
+	}
+}
+
+void gira_esquerda( int16 pulso, int16 giros){
+
+int16 i;
+
+for(i=0; i<giros; i++){
+
+	output_high(PIN_D3);
+	delay_ms(pulso);
+	output_low(PIN_D3);
+ 	
+	output_high(PIN_D2);
+	delay_ms(pulso);
+	output_low(PIN_D2);
+ 	
+	output_high(PIN_D1);
+	delay_ms(pulso);
+	output_low(PIN_D1);
+ 	
+	output_high(PIN_D0);
+	delay_ms(pulso);
+	output_low(PIN_D0);
+	}
+}

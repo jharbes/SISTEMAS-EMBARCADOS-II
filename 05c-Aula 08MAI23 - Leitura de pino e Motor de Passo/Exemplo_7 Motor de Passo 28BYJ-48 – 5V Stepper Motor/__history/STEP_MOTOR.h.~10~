@@ -1,0 +1,11 @@
+#include <18F4520.h>
+#device ADC=10
+
+#FUSES NOWDT                	//No Watch Dog Timer
+#FUSES NOMCLR         				//No MASTER CLEAR
+
+#use delay(internal=1000000)
+
+#define Step_1_8_graus	50	// 200/4
+#define Step_10_graus 	9		// 36/4
+#define largura_pulso   1000

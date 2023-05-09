@@ -1,0 +1,49 @@
+
+ROM used:   536/32768 (2%)
+            536/32768 (2%) including unused fragments
+
+            0.6 Average locations per line
+            13.4 Average locations per statement
+
+RAM used:   6/1536 (0%) at main() level
+            16/1536 (1%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   78    40 100  STEP_MOTOR.c
+   16     0   0  STEP_MOTOR.h
+  879     0   0  C:\Program Files (x86)\PICC\Devices\18F4520.h
+----- -----
+  973    40 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     28   3    1             @delay_ms1
+0    118  11    1    248  2.8  main
+0    178  17    7    401  4.5  gira_direita
+0     30   3    5             @MUL1616
+0    178  17    7    401  4.5  gira_esquerda
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              40
+    Comments                161
+    Volume (V)              1363
+    Difficulty (D)          11.4
+    Effort to implement (E) 15538
+    Time to implement (T)   14 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    50
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   532  32232  
+
+
+

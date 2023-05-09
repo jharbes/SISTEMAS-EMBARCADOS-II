@@ -1,0 +1,23 @@
+#include <main.h>
+#include <lcd.c>
+
+void main()
+{
+
+   while(TRUE)
+   {
+
+   if( input(pin_a0)){
+   output_high(PIN_B0);
+   }
+   else output_low(PIN_B0);
+   
+   if( input(pin_a1)){
+   output_high(PIN_B1);
+   }   
+   else output_low(PIN_B1);
+       
+
+   }
+
+}

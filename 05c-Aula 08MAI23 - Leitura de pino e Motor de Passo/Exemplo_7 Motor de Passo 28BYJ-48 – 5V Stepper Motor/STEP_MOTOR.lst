@@ -1,0 +1,370 @@
+CCS PCH C Compiler, Version 5.099, 54900               08-dez-22 17:17
+
+               Filename:   G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_2\Sistemas Embarcados 2\09-Aula 01DEZV22 - Leitura de pino e Motor de Passo\Exemplo_7 Motor de Passo\STEP_MOTOR.lst
+
+               ROM used:   536 bytes (2%)
+                           Largest free fragment is 32232
+               RAM used:   6 (0%) at main() level
+                           16 (1%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+0000:  GOTO   01A2
+.................... #include <STEP_MOTOR.h>
+.................... #include <18F4520.h>
+.................... //////////// Standard Header file for the PIC18F4520 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F4520
+*
+0020:  MOVF   0B,W
+0022:  MULWF  0D
+0024:  MOVFF  FF3,01
+0028:  MOVFF  FF4,00
+002C:  MULWF  0E
+002E:  MOVF   FF3,W
+0030:  ADDWF  00,F
+0032:  MOVF   0C,W
+0034:  MULWF  0D
+0036:  MOVF   FF3,W
+0038:  ADDWFC 00,W
+003A:  MOVWF  02
+003C:  RETURN 0
+.................... 
+.................... #list
+.................... 
+.................... 
+.................... #FUSES NOMCLR         				//No MASTER CLEAR
+.................... 
+.................... #use delay(internal=1000000)
+*
+0004:  CLRF   FEA
+0006:  MOVLW  0C
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BTFSC  FD8.2
+000E:  GOTO   001E
+0012:  MOVLW  52
+0014:  MOVWF  00
+0016:  DECFSZ 00,F
+0018:  BRA    0016
+001A:  DECFSZ FEF,F
+001C:  BRA    0012
+001E:  RETURN 0
+.................... 
+.................... #define Step_1_8_graus	50	// 200/4 = número de repetições para uma rotação 360 graus
+.................... 														// motor de passo de 1.8graus
+.................... #define Step_10_graus 	9		// 36/4
+.................... 														// motor de passo de 10graus
+.................... 													 	
+.................... #define Step_5_graus	16	// 64/4 = número de repetições para uma rotação 360 graus
+.................... 														// motor 28BYJ-48 - 1 volta = 64 pulsos, ou seja, 5.625 graus por pulso
+.................... 													 	
+.................... #define largura_pulso   50 // determina a velocidade de rotação
+.................... 
+.................... 
+.................... void gira_direita( int16 pulso, int16 giros);	// considerou-se xx graus cada step
+.................... void gira_esquerda( int16 pulso, int16 giros);// cada giro equivale a uma sequência
+.................... 																							// de 4 pulsos
+.................... int8 passo;
+.................... 
+.................... 
+.................... void main()
+*
+01A2:  CLRF   FF8
+01A4:  BCF    FD0.7
+01A6:  MOVLW  40
+01A8:  MOVWF  FD3
+01AA:  CLRF   F9B
+01AC:  MOVF   FD3,W
+01AE:  MOVF   FC1,W
+01B0:  ANDLW  C0
+01B2:  IORLW  0F
+01B4:  MOVWF  FC1
+01B6:  MOVLW  07
+01B8:  MOVWF  FB4
+.................... {
+.................... //passo =	Step_1_8_graus; // motor de passo de 1.8graus
+.................... passo =	Step_5_graus;     // motor de passo de 5.625 graus
+01BA:  MOVLW  10
+01BC:  MOVWF  04
+.................... //passo =	Step_10_graus;  // motor de passo de 10graus
+.................... 
+.................... output_low(PIN_D0);
+01BE:  BCF    F95.0
+01C0:  BCF    F8C.0
+.................... output_low(PIN_D1);
+01C2:  BCF    F95.1
+01C4:  BCF    F8C.1
+.................... output_low(PIN_D2);
+01C6:  BCF    F95.2
+01C8:  BCF    F8C.2
+.................... output_low(PIN_D3);
+01CA:  BCF    F95.3
+01CC:  BCF    F8C.3
+.................... delay_ms(1000);
+01CE:  MOVLW  04
+01D0:  MOVWF  05
+01D2:  MOVLW  FA
+01D4:  MOVWF  0C
+01D6:  RCALL  0004
+01D8:  DECFSZ 05,F
+01DA:  BRA    01D2
+.................... 
+.................... 	while(TRUE)
+.................... 	{
+.................... 	gira_direita( largura_pulso, 1);
+01DC:  CLRF   06
+01DE:  MOVLW  32
+01E0:  MOVWF  05
+01E2:  CLRF   08
+01E4:  MOVLW  01
+01E6:  MOVWF  07
+01E8:  BRA    003E
+.................... 	delay_ms(1000);
+01EA:  MOVLW  04
+01EC:  MOVWF  05
+01EE:  MOVLW  FA
+01F0:  MOVWF  0C
+01F2:  RCALL  0004
+01F4:  DECFSZ 05,F
+01F6:  BRA    01EE
+.................... 	gira_esquerda(largura_pulso, 1);
+01F8:  CLRF   06
+01FA:  MOVLW  32
+01FC:  MOVWF  05
+01FE:  CLRF   08
+0200:  MOVLW  01
+0202:  MOVWF  07
+0204:  BRA    00F0
+.................... 	delay_ms(1000); 	
+0206:  MOVLW  04
+0208:  MOVWF  05
+020A:  MOVLW  FA
+020C:  MOVWF  0C
+020E:  RCALL  0004
+0210:  DECFSZ 05,F
+0212:  BRA    020A
+0214:  BRA    01DC
+.................... 	}
+.................... 
+.................... }
+.................... 
+0216:  SLEEP 
+.................... void gira_direita( int16 pulso, int16 giros){
+.................... 
+.................... int16 i;
+.................... 
+.................... for(i=0; i<giros*passo; i++){
+*
+003E:  CLRF   0A
+0040:  CLRF   09
+0042:  MOVFF  08,0C
+0046:  MOVFF  07,0B
+004A:  CLRF   0E
+004C:  MOVFF  04,0D
+0050:  RCALL  0020
+0052:  MOVFF  02,03
+0056:  MOVF   0A,W
+0058:  SUBWF  02,W
+005A:  BNC   00EC
+005C:  BNZ   0064
+005E:  MOVF   01,W
+0060:  SUBWF  09,W
+0062:  BC    00EC
+.................... 
+.................... 	output_high(PIN_D0);
+0064:  BCF    F95.0
+0066:  BSF    F8C.0
+.................... 	delay_ms(pulso);
+0068:  MOVFF  06,0B
+006C:  INCF   0B,F
+006E:  DECF   0B,F
+0070:  BTFSC  FD8.2
+0072:  BRA    007A
+0074:  SETF   0C
+0076:  RCALL  0004
+0078:  BRA    006E
+007A:  MOVFF  05,0C
+007E:  RCALL  0004
+.................... 	output_low(PIN_D0);
+0080:  BCF    F95.0
+0082:  BCF    F8C.0
+....................  	
+.................... 	output_high(PIN_D1);
+0084:  BCF    F95.1
+0086:  BSF    F8C.1
+.................... 	delay_ms(pulso);
+0088:  MOVFF  06,0B
+008C:  INCF   0B,F
+008E:  DECF   0B,F
+0090:  BTFSC  FD8.2
+0092:  BRA    009A
+0094:  SETF   0C
+0096:  RCALL  0004
+0098:  BRA    008E
+009A:  MOVFF  05,0C
+009E:  RCALL  0004
+.................... 	output_low(PIN_D1);
+00A0:  BCF    F95.1
+00A2:  BCF    F8C.1
+....................  	
+.................... 	output_high(PIN_D2);
+00A4:  BCF    F95.2
+00A6:  BSF    F8C.2
+.................... 	delay_ms(pulso);
+00A8:  MOVFF  06,0B
+00AC:  INCF   0B,F
+00AE:  DECF   0B,F
+00B0:  BTFSC  FD8.2
+00B2:  BRA    00BA
+00B4:  SETF   0C
+00B6:  RCALL  0004
+00B8:  BRA    00AE
+00BA:  MOVFF  05,0C
+00BE:  RCALL  0004
+.................... 	output_low(PIN_D2);
+00C0:  BCF    F95.2
+00C2:  BCF    F8C.2
+....................  	
+.................... 	output_high(PIN_D3);
+00C4:  BCF    F95.3
+00C6:  BSF    F8C.3
+.................... 	delay_ms(pulso);
+00C8:  MOVFF  06,0B
+00CC:  INCF   0B,F
+00CE:  DECF   0B,F
+00D0:  BTFSC  FD8.2
+00D2:  BRA    00DA
+00D4:  SETF   0C
+00D6:  RCALL  0004
+00D8:  BRA    00CE
+00DA:  MOVFF  05,0C
+00DE:  RCALL  0004
+.................... 	output_low(PIN_D3);
+00E0:  BCF    F95.3
+00E2:  BCF    F8C.3
+00E4:  INCF   09,F
+00E6:  BTFSC  FD8.2
+00E8:  INCF   0A,F
+00EA:  BRA    0042
+.................... 	}
+00EC:  GOTO   01EA (RETURN)
+.................... }
+.................... 
+.................... void gira_esquerda( int16 pulso, int16 giros){
+.................... 
+.................... int16 i;
+.................... 
+.................... for(i=0; i<giros*passo; i++){
+00F0:  CLRF   0A
+00F2:  CLRF   09
+00F4:  MOVFF  08,0C
+00F8:  MOVFF  07,0B
+00FC:  CLRF   0E
+00FE:  MOVFF  04,0D
+0102:  RCALL  0020
+0104:  MOVFF  02,03
+0108:  MOVF   0A,W
+010A:  SUBWF  02,W
+010C:  BNC   019E
+010E:  BNZ   0116
+0110:  MOVF   01,W
+0112:  SUBWF  09,W
+0114:  BC    019E
+.................... 
+.................... 	output_high(PIN_D3);
+0116:  BCF    F95.3
+0118:  BSF    F8C.3
+.................... 	delay_ms(pulso);
+011A:  MOVFF  06,0B
+011E:  INCF   0B,F
+0120:  DECF   0B,F
+0122:  BTFSC  FD8.2
+0124:  BRA    012C
+0126:  SETF   0C
+0128:  RCALL  0004
+012A:  BRA    0120
+012C:  MOVFF  05,0C
+0130:  RCALL  0004
+.................... 	output_low(PIN_D3);
+0132:  BCF    F95.3
+0134:  BCF    F8C.3
+....................  	
+.................... 	output_high(PIN_D2);
+0136:  BCF    F95.2
+0138:  BSF    F8C.2
+.................... 	delay_ms(pulso);
+013A:  MOVFF  06,0B
+013E:  INCF   0B,F
+0140:  DECF   0B,F
+0142:  BTFSC  FD8.2
+0144:  BRA    014C
+0146:  SETF   0C
+0148:  RCALL  0004
+014A:  BRA    0140
+014C:  MOVFF  05,0C
+0150:  RCALL  0004
+.................... 	output_low(PIN_D2);
+0152:  BCF    F95.2
+0154:  BCF    F8C.2
+....................  	
+.................... 	output_high(PIN_D1);
+0156:  BCF    F95.1
+0158:  BSF    F8C.1
+.................... 	delay_ms(pulso);
+015A:  MOVFF  06,0B
+015E:  INCF   0B,F
+0160:  DECF   0B,F
+0162:  BTFSC  FD8.2
+0164:  BRA    016C
+0166:  SETF   0C
+0168:  RCALL  0004
+016A:  BRA    0160
+016C:  MOVFF  05,0C
+0170:  RCALL  0004
+.................... 	output_low(PIN_D1);
+0172:  BCF    F95.1
+0174:  BCF    F8C.1
+....................  	
+.................... 	output_high(PIN_D0);
+0176:  BCF    F95.0
+0178:  BSF    F8C.0
+.................... 	delay_ms(pulso);
+017A:  MOVFF  06,0B
+017E:  INCF   0B,F
+0180:  DECF   0B,F
+0182:  BTFSC  FD8.2
+0184:  BRA    018C
+0186:  SETF   0C
+0188:  RCALL  0004
+018A:  BRA    0180
+018C:  MOVFF  05,0C
+0190:  RCALL  0004
+.................... 	output_low(PIN_D0);
+0192:  BCF    F95.0
+0194:  BCF    F8C.0
+0196:  INCF   09,F
+0198:  BTFSC  FD8.2
+019A:  INCF   0A,F
+019C:  BRA    00F4
+.................... 	}
+019E:  GOTO   0206 (RETURN)
+.................... }
+
+Configuration Fuses:
+   Word  1: C800   INTRC_IO FCMEN IESO
+   Word  2: 1E1E   PUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 0700   CCP2C1 PBADEN LPT1OSC NOMCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

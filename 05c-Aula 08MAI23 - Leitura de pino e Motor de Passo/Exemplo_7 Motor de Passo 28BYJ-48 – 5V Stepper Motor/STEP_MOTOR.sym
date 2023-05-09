@@ -1,0 +1,81 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     passo
+005-006 gira_direita.pulso
+005-006 gira_esquerda.pulso
+005     main.@SCRATCH1
+007-008 gira_esquerda.giros
+007-008 gira_direita.giros
+009-00A gira_esquerda.i
+009-00A gira_direita.i
+00B-00C @MUL1616.P1
+00B     gira_direita.@SCRATCH1
+00B     gira_esquerda.@SCRATCH1
+00C     @delay_ms1.P1
+00D-00E @MUL1616.P1
+00F     @MUL1616.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000020  @MUL1616
+00003E  gira_direita
+0000F0  gira_esquerda
+0001A2  main
+0001A2  @cinit1
+0001BA  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_2\Sistemas Embarcados 2\09-Aula 01DEZV22 - Leitura de pino e Motor de Passo\Exemplo_7 Motor de Passo\
+
+Project Files:
+    STEP_MOTOR.c                                            [08-dez-22 17:07  CRC=2F26295F]
+    STEP_MOTOR.h                                            [08-dez-22 17:17  CRC=7D525474]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+
+Source signature=341B3F55
+Program memory checksum=0000
+Hex file CRC=4E50
+
+Units:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_2\Sistemas Embarcados 2\09-Aula 01DEZV22 - Leitura de pino e Motor de Passo\Exemplo_7 Motor de Passo\STEP_MOTOR (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   STEP_MOTOR.xsym
+    Errors:      STEP_MOTOR.err
+    Ext Symbols: STEP_MOTOR.esym
+    INHX32:      STEP_MOTOR.hex
+    Symbols:     STEP_MOTOR.sym
+    List:        STEP_MOTOR.lst
+    Debug/COFF:  STEP_MOTOR.cof
+    Project:     STEP_MOTOR.ccspjt
+    Call Tree:   STEP_MOTOR.tre
+    Statistics:  STEP_MOTOR.STA

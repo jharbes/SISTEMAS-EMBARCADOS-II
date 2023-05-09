@@ -1,0 +1,3 @@
+#include <18F4520.h>
+#use delay(internal=8MHz)
+

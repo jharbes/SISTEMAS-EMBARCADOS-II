@@ -1,0 +1,105 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     g_LcdX
+005     g_LcdY
+006-007 @sprintf_string
+008     lcd_init.i
+008     MAIN.@SCRATCH1
+008     @PSTRINGC_756.@SCRATCH1
+009-00C lcd_init.LCD_INIT_STRING
+009     @PSTRINGC_756.@SCRATCH2
+00A     lcd_putc.c
+00B     lcd_putc.@SCRATCH1
+00C     lcd_gotoxy.x
+00D     @delay_ms1.P1
+00D     lcd_gotoxy.y
+00D     lcd_init.@SCRATCH1
+00E     lcd_gotoxy.address
+00F     lcd_gotoxy.@SCRATCH1
+010     lcd_send_byte.address
+011     lcd_send_byte.n
+012     lcd_read_byte.low
+012     lcd_send_byte.@SCRATCH1
+013     lcd_read_byte.high
+013     lcd_send_nibble.n
+014     lcd_read_nibble.n
+014     lcd_read_byte.@SCRATCH1
+015     lcd_read_nibble.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const771.call
+000010  @const776.call
+000012  @const777.call
+000014  @const778.call
+000028  @const779.call
+00003C  @const780.call
+00004E  @const781.call
+000060  @delay_ms1
+000086  lcd_send_nibble
+0000C6  lcd_read_nibble
+000118  lcd_read_byte
+000162  lcd_send_byte
+0001A8  lcd_init
+000228  lcd_gotoxy
+000256  lcd_putc
+0002E4  @PSTRINGC_756
+000304  MAIN
+000304  @cinit1
+000320  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_2\Sistemas Embarcados 2\09-Aula 01DEZV22 - Leitura de pino e Motor de Passo\Exemplo_7 Leitura INPUT PIN\
+
+Project Files:
+    main.c                                                  [02-set-21 12:11  CRC=741245DA]
+    main.h                                                  [08-dez-22 16:45  CRC=BC77E008]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=97A7F5B7
+Program memory checksum=0000
+Hex file CRC=5B9B
+
+Units:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_2\Sistemas Embarcados 2\09-Aula 01DEZV22 - Leitura de pino e Motor de Passo\Exemplo_7 Leitura INPUT PIN\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

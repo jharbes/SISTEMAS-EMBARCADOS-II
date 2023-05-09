@@ -1,0 +1,27 @@
+ÀÄSTEP_MOTOR
+   ÀÄmain  0/118  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/28  Ram=1
+      ÃÄgira_direita  0/178  Ram=7
+      ³  ÃÄ@MUL1616  0/30  Ram=5
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÀÄ@delay_ms1  0/28  Ram=1
+      ÃÄ@delay_ms1  0/28  Ram=1
+      ÃÄgira_esquerda  0/178  Ram=7
+      ³  ÃÄ@MUL1616  0/30  Ram=5
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÃÄ@delay_ms1  0/28  Ram=1
+      ³  ÀÄ@delay_ms1  0/28  Ram=1
+      ÀÄ@delay_ms1  0/28  Ram=1

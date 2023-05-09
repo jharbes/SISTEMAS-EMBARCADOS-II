@@ -1,0 +1,40 @@
+#include <main.h>
+
+void main()
+{
+   setup_adc_ports(NO_ANALOGS, VSS_VDD);// essa linha foi gerada pelo Code Wizard, mas é desnecessária
+
+   while(TRUE)
+   {
+
+   if( input(pin_a0)){
+   output_high(PIN_B0);
+   }
+   else output_low(PIN_B0);
+   
+   if( input(pin_a1)){
+   output_high(PIN_B1);
+   }   
+   else output_low(PIN_B1);
+       
+   }
+   
+  
+   TRISB=0b00000000;
+   
+   PORTB= 0b010101010;
+   delay_ms(1000);
+   PORTB= 0b001010101;
+   delay_ms(1000);
+   PORTB= 0b010101010;
+   delay_ms(1000);
+   PORTB= 0b001010101;
+   delay_ms(1000);
+   PORTB= 0b010101010;
+   delay_ms(1000);
+   PORTB= 0b001010101;
+   delay_ms(1000);
+   
+   
+
+}
