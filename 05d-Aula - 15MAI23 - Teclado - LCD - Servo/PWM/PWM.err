@@ -1,0 +1,6 @@
+Compiling C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\8-Aula 07OUT21\PWM\PWM on 07-out-21 at 17:01
+--- Info 300 "C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\8-Aula 07OUT21\PWM\PWM.h" Line 8(1,1): More info:   PWM Resolution: 8,97 bits
+--- Info 300 "C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\8-Aula 07OUT21\PWM\PWM.h" Line 9(1,1): More info:   PWM period: 1,00 ms, Frequency: 1.000,000 Hz, Resolution: 11,00 bits, Maximum duty: 92,70%, Minimum duty: 7,35%
+      Memory usage:   ROM=4%      RAM=2% - 4%
+      0 Errors,  0 Warnings.
+Build Successful.

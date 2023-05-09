@@ -1,0 +1,79 @@
+#include <servo.h>
+#include <input.c>
+#include <STDLIB.H>
+#include <lcd.c>
+
+//#include "gets_timeout.c"
+char mystring[20]="    ";
+char fim_mystring[15]="    ";
+char *ponteiro;
+int16 angulo_inteiro;
+float angulo;
+float angulo_flutuante;
+
+float valor;
+int16 duty;
+float tensao=5.35;
+   
+   
+   
+
+
+#define max 5
+
+#INT_TIMER1
+void  TIMER1_isr(void) 
+{
+valor= read_adc();     
+duty= valor*1000/1024;
+delay_us(100); 
+tensao= (valor*5) /1024;
+lcd_gotoxy(1,2); //Posicina o LCD na segunda linha e primeiro caracter
+printf(LCD_PUTC,"%2.2f volts     ",tensao);
+delay_ms(100); 
+}
+
+void main()
+{
+   setup_adc(ADC_CLOCK_INTERNAL); 
+   setup_adc_ports(AN0);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_1);      //32,7 ms overflow
+
+   enable_interrupts(INT_TIMER1);
+   enable_interrupts(GLOBAL);
+   
+   
+   set_adc_channel(0); 
+
+lcd_init();
+printf("Projeto  SERVO\n\r");    valor= read_adc();
+duty= valor*1000/1024;
+delay_us(100); 
+tensao= (valor*5) /1024;   
+lcd_gotoxy(1,2); //Posicina o LCD na segunda linha e primeiro caracter
+printf(LCD_PUTC,"%2.2f volts     ",tensao);
+delay_ms(100); 
+
+
+   while(1){       
+      printf("\n\rDigite o angulo\r\n");  // hang till input unless TIMEOUT used
+      //gets_timeout(mystring,5);   
+      get_string(mystring, max);
+      printf("\n\rAngulo=%s\r\n",mystring);
+      
+      angulo=strtof(mystring, fim_mystring);
+      angulo_inteiro=strtol(mystring, fim_mystring,10);
+      angulo_flutuante= angulo/10;
+      printf("\n\rAngulo decimal=%LU\r\n",angulo_inteiro);      
+      printf("\n\rAngulo flutuante=%6.1f\r\n",angulo_flutuante);
+      
+      
+//!      enable_interrupts(INT_TIMER1);
+//!      delay_ms(100);
+//!      disable_interrupts(INT_TIMER1);
+      
+      
+      
+   } // while(1)
+
+}

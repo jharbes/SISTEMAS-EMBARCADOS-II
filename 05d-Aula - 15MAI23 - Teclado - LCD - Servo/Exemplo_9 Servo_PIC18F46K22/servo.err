@@ -1,0 +1,19 @@
+Compiling C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo on 21-ago-21 at 15:50
+>>> Warning 203 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 65(1,1): Condition always TRUE
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_L32D_1109FPFPF)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGCN_1109)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ADDFF)
+>>> Warning 216 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 77(1,2): Interrupts disabled during call to prevent re-entrancy:  (@SFTOI)
+>>> Warning 202 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 9(7,15): Variable never used:   ponteiro
+>>> Warning 202 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 11(7,13): Variable never used:   angulo
+>>> Warning 202 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 12(7,23): Variable never used:   angulo_flutuante
+>>> Warning 202 "C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo.c" Line 15(7,11): Variable never used:   duty
+      Memory usage:   ROM=8%      RAM=2% - 5%
+      0 Errors,  15 Warnings.
+Build Successful.

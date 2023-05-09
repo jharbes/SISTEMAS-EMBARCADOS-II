@@ -1,0 +1,18 @@
+ÀÄSistemas de Informação 2021
+   ÃÄmain  0/274  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄ@MUL1616  0/30  Ram=5
+   ³  ÃÄ@PWM_SET_DUTY_PERCENT_HW_1  0/130  Ram=6
+   ³  ³  ÃÄ@MUL3232  0/84  Ram=14
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÃÄ@delay_ms1  0/46  Ram=1
+   ³  ÃÄ@delay_ms1  0/46  Ram=1
+   ³  ÃÄ@MUL1616  0/30  Ram=5
+   ³  ÃÄ@PWM_SET_DUTY_PERCENT_SW_2  0/248  Ram=2
+   ³  ³  ÃÄ@MUL3232  0/84  Ram=14
+   ³  ³  ÃÄ@DIV3232  0/142  Ram=13
+   ³  ³  ÃÄ@MUL3232  0/84  Ram=14
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÀÄ@delay_ms1  0/46  Ram=1
+   ÀÄ@TIMERISR_1  0/140  Ram=0

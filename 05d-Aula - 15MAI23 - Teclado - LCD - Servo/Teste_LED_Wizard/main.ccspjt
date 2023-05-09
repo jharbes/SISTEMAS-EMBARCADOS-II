@@ -1,0 +1,41 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F4520
+CCSVerions=5.099c
+Compiler=PCH
+CCSVersion=5.099
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\Aula 26AGO21\Teste_LED_Wizard\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=1
+D1=26-08-2021
+D1_L=3
+D1_L1=[71948]Started Editing.
+D1_L2=[72392]Stopped Editing.
+TotalEdit=3
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L3=[72784]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+2=main.h
+t2=1
+Count=2
+[main.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=main (main)

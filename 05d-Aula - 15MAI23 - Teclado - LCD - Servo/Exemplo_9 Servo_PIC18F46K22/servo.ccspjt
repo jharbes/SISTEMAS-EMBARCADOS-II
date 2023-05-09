@@ -1,0 +1,136 @@
+[PROJECT]
+Target=servo.hex
+Processor_Text=PIC18F46K22
+CCSVerions=5.007
+Compiler=PCH
+CCSVersion=5.099
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=servo.c
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+[Directories]
+Include=<default>
+Library=
+LinkerScript=
+output=
+[C:\Users\William\Dropbox\CEFET\4AATMI_2016_1\Microcontroladores\Trabalhos 2017\Grupo_4\servo]
+Type=4
+[mru-list]
+1=servo.c
+[Opened Files]
+1=servo.c
+2=servo.h
+3=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F46K22.h
+4=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\input.c
+5=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+6=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\STDLIB.H
+t1=1
+Count=9
+t2=1
+t3=1
+t4=1
+t5=1
+t6=1
+7=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+t7=1
+8=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+t8=1
+9=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t9=1
+10=
+[servo.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[ProjectLog]
+Days=6
+D1=10-06-2018
+D1_L=4
+D1_L1=[85332]Project Opened.
+D1_L2=[85443]Started Editing.
+D1_L3=[85750]Stopped Editing.
+TotalEdit=58
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L4=[85750]Project Closed.
+D2=12-06-2018
+D2_L=2
+D2_L1=[36360]Project Opened.
+D2_L2=[36440]Project Closed.
+D3=15-06-2018
+D3_L=2
+D3_L1=[50656]Project Opened.
+D3_L2=[51745]Project Closed.
+D4=17-06-2018
+D4_L=20
+D4_L1=[74994]Project Opened.
+D4_L2=[75139]Started Editing.
+D4_L3=[75482]Stopped Editing.
+D4_L4=[75845]Started Editing.
+D4_L5=[77993]Stopped Editing.
+D4_L6=[81179]Started Editing.
+D4_L7=[81214]Stopped Editing.
+D4_E=52
+D4_D=0
+D4_L8=[81215]Project Closed.
+D4_L9=[81215]Project Opened.
+D4_L10=[81441]Started Editing.
+D4_L11=[82068]Stopped Editing.
+D4_L12=[82068]Project Closed.
+D4_L13=[82323]Project Opened.
+D4_L14=[82336]Started Editing.
+D4_L15=[82889]Stopped Editing.
+D4_L16=[83745]Project Closed.
+D4_L17=[83745]Project Opened.
+D4_L18=[84069]Started Editing.
+D4_L19=[84217]Stopped Editing.
+D4_L20=[84217]Project Closed.
+D5=24-06-2018
+D5_L=2
+D5_L1=[79970]Project Opened.
+D5_L2=[80170]Project Closed.
+D6=21-08-2021
+D6_L=2
+D6_L1=[56796]Project Opened.
+D6_L2=[58383]Project Closed.
+
+[defines]
+buildcount=33
+enabled=0
+chip=1
+D1=
+V1=
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+[CompilerVersion]
+Fixed=
+[Units]
+Count=1
+1=servo
+Link=0

@@ -1,0 +1,259 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A-01B strtok.save
+01C-01F _Randseed
+020-033 mystring
+034-042 fim_mystring
+043-044 ponteiro
+045-046 angulo_inteiro
+047-04A angulo
+04B-04E angulo_flutuante
+04F-052 valor
+053-054 duty
+055-058 tensao
+059-05A servo1_cmd
+05B-05C servo2_cmd
+05D-05E @sprintf_string
+05F-060 @PRINTF_LU_9600_31766_31767.P1
+05F     lcd_init.i
+05F-060 get_string.s
+05F-060 strtol.s
+05F     @PSTRINGCN_9600_31766_31767.P1
+05F     @PSTRINGC_9600_31766_31767.@SCRATCH1
+060-063 lcd_init.LCD_INIT_STRING
+060     @PSTRINGC_9600_31766_31767.@SCRATCH2
+060     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+061-062 strtol.endptr
+061     get_string.max
+061     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+061     @PRINTF_LU_9600_31766_31767.@SCRATCH1
+062     get_string.len
+062     @PRINTF_LU_9600_31766_31767.@SCRATCH2
+063     strtol.base
+063     get_string.c
+063     @PRINTF_LU_9600_31766_31767.@SCRATCH3
+064     InputPutc.c
+064-065 strtol.sc
+064     get_string.@SCRATCH1
+064     lcd_init.@SCRATCH1
+064     @PRINTF_LU_9600_31766_31767.@SCRATCH4
+065     get_string.@SCRATCH2
+065     @PRINTF_LU_9600_31766_31767.@SCRATCH5
+066-067 strtol.s1
+066     @PRINTF_LU_9600_31766_31767.@SCRATCH6
+067     @PRINTF_LU_9600_31766_31767.@SCRATCH7
+068-069 strtol.sd
+06A-06B strtol.x
+06C     strtol.sign
+06D-090 strtol.digits
+091     strtol.@SCRATCH1
+092-093 memchr.s
+092     strtol.@SCRATCH2
+093-094 @MULS1616.P1
+094     memchr.c
+095-096 @MULS1616.P1
+095-096 memchr.n
+097     memchr.uc
+097     @MULS1616.@SCRATCH1
+098-099 memchr.su
+098     @MULS1616.@SCRATCH2
+09A     memchr.@SCRATCH1
+09B-09E @SFTOI.P1
+09B     @PSTRINGCN_1109.P2
+09B-09C @ITOF.P3
+09B-09E @PRINTF_L32D_1109FPFPF.P4
+09B-09E @ADDFF.P5
+09B     TIMER1_isr.@SCRATCH1
+09C     @delay_us1.P1
+09C     TIMER1_isr.@SCRATCH2
+09C     @PSTRINGCN_1109.@SCRATCH1
+09D     TIMER1_isr.@SCRATCH3
+09D     @PSTRINGCN_1109.@SCRATCH2
+09E     TIMER1_isr.@SCRATCH4
+09F     @PRINTF_L32D_1109FPFPF.P1
+09F-0A2 @DIVFF.P2
+09F-0A2 @ADDFF.P3
+0A0     @PRINTF_L32D_1109FPFPF.@SCRATCH1
+0A1     @PRINTF_L32D_1109FPFPF.@SCRATCH2
+0A2     @PRINTF_L32D_1109FPFPF.@SCRATCH3
+0A3-0A6 @DIVFF.P1
+0A3     @ADDFF.@SCRATCH1
+0A3     @PRINTF_L32D_1109FPFPF.@SCRATCH4
+0A4     @ADDFF.@SCRATCH2
+0A4     @PRINTF_L32D_1109FPFPF.@SCRATCH5
+0A5     @ADDFF.@SCRATCH3
+0A5     @PRINTF_L32D_1109FPFPF.@SCRATCH6
+0A6     @ADDFF.@SCRATCH4
+0A6     @PRINTF_L32D_1109FPFPF.@SCRATCH7
+0A7     @ADDFF.@SCRATCH5
+0A7     @DIVFF.@SCRATCH1
+0A7     @PRINTF_L32D_1109FPFPF.@SCRATCH8
+0A8-0AB @DIV3232.P1
+0A8-0AB @FTOSD.P2
+0A8     lcd_putc.c
+0A8-0AB @MULFF.P1
+0A8     @ADDFF.@SCRATCH6
+0A8     @DIVFF.@SCRATCH2
+0A9     lcd_gotoxy.x
+0A9     @delay_ms1.P1
+0A9     @ADDFF.@SCRATCH7
+0A9     @DIVFF.@SCRATCH3
+0AA     lcd_gotoxy.y
+0AA     @ADDFF.@SCRATCH8
+0AA     @DIVFF.@SCRATCH4
+0AB     lcd_gotoxy.address
+0AB     @DIVFF.@SCRATCH5
+0AC-0AF @MULFF.P1
+0AC-0AF @DIV3232.P2
+0AC     @DIVFF.@SCRATCH6
+0AC     lcd_gotoxy.@SCRATCH1
+0AC     @FTOSD.@SCRATCH1
+0AD     lcd_send_byte.address
+0AE     lcd_send_byte.n
+0AF     lcd_read_byte.low
+0AF     lcd_send_byte.@SCRATCH1
+0B0     lcd_send_nibble.n
+0B0     lcd_read_byte.high
+0B0     @MULFF.@SCRATCH1
+0B0     @DIV3232.@SCRATCH1
+0B1     lcd_read_nibble.n
+0B1     @MULFF.@SCRATCH2
+0B1     lcd_read_byte.@SCRATCH1
+0B1     @DIV3232.@SCRATCH2
+0B2     @MULFF.@SCRATCH3
+0B2     lcd_read_nibble.@SCRATCH1
+0B2     @DIV3232.@SCRATCH3
+0B3     @DIV3232.@SCRATCH4
+0B4     @DIV3232.@SCRATCH5
+F55     CCP_5
+F55     CCP_5_LOW
+F56     CCP_5_HIGH
+F58     CCP_4
+F58     CCP_4_LOW
+F59     CCP_4_HIGH
+F5E     CCP_3_LOW
+F5E     CCP_3
+F5F     CCP_3_HIGH
+F67     CCP_2
+F67     CCP_2_LOW
+F68     CCP_2_HIGH
+F78.6   C2OUT
+F79.6   C1OUT
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  @ITOF
+0000E4  @MULFF
+0001D6  @DIVFF
+000330  lcd_read_nibble
+000382  lcd_read_byte
+0003CC  lcd_send_nibble
+00040E  lcd_send_byte
+000454  lcd_gotoxy
+000476  @FTOSD
+0004B4  @DIV3232
+000542  @delay_ms1
+000570  lcd_putc
+0005C0  @PRINTF_L32D_1109FPFPF
+000738  @PSTRINGCN_1109
+000756  @ADDFF
+0009C0  @SFTOI
+0009F8  @delay_us1
+000A16  TIMER1_isr
+000B82  @const1133.call
+000B94  @const1149.call
+000BA6  @const1154.call
+000BB8  @const1155.call
+000BEC  @const1156.call
+000C04  lcd_init
+000CCE  @PSTRINGC_9600_31766_31767
+000CF0  @PUTCHARI_BIU_1
+000CFA  InputPutc
+000D00  get_string
+000D70  memchr
+000DBA  @MULS1616
+000E0C  strtol
+00116E  @PSTRINGCN_9600_31766_31767
+001190  @PRINTF_LU_9600_31766_31767
+00123E  @cinit1
+00123E  MAIN
+00127E  @cinit2
+0135  StrtoulGO
+088C  StrtolGO
+
+Project Directory:
+    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\
+
+Project Files:
+    servo.c                                                 [18-jun-18 11:19  CRC=487DAE22]
+    servo.h                                                 [17-jun-18 22:52  CRC=DC898FD0]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F46K22.h [06-jan-21 18:55  CRC=237D2B2B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\input.c [10-mar-17 08:52  CRC=62EEF0AB]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-jan-08 14:55  CRC=2D1F019F]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\STDLIB.H [30-jun-20 13:21  CRC=452E14BB]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-jan-19 11:26  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [06-abr-20 07:43  CRC=B1605627]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=FBEA21C9
+Program memory checksum=0000
+Hex file CRC=3676
+
+Units:
+    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Servo_PIC18F46K22\servo (main)
+
+Compiler Settings:
+    Processor:      PIC18F46K22
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   servo.xsym
+    Errors:      servo.err
+    Ext Symbols: servo.esym
+    INHX32:      servo.hex
+    Symbols:     servo.sym
+    List:        servo.lst
+    Debug/COFF:  servo.cof
+    Project:     servo.ccspjt
+    Call Tree:   servo.tre
+    Statistics:  servo.STA

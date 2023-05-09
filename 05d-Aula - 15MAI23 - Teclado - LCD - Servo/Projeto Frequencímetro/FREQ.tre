@@ -1,0 +1,44 @@
+ÀÄSistemas de Informação 2021
+   ÃÄMAIN  0/200  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄlcd_init  0/124  Ram=6
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/62  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/62  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ÃÄlcd_read_byte  0/74  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  0/82  Ram=2
+   ³  ³     ³  ÀÄlcd_read_nibble  0/82  Ram=2
+   ³  ³     ÃÄlcd_send_nibble  0/62  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/62  Ram=1
+   ³  ÃÄ@PSTRINGC_754  0/34  Ram=2
+   ³  ³  ÀÄlcd_putc  0/80  Ram=1
+   ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³     ³  ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ³     ÀÄ*
+   ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³        ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGCN_754  0/30  Ram=3
+   ³  ³  ÀÄlcd_putc  0/80  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PRINTF_L32U_754  0/166  Ram=12
+   ³  ³  ÃÄ@DIV3232  0/142  Ram=13
+   ³  ³  ÃÄlcd_putc  0/80  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÀÄ@PSTRINGCN_754  0/30  Ram=3
+   ³     ÀÄ*
+   ÀÄTIMER0_isr  0/22  Ram=0

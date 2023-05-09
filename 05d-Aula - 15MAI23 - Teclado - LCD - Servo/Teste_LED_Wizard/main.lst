@@ -1,0 +1,105 @@
+CCS PCH C Compiler, Version 5.099, 54900               26-ago-21 20:01
+
+               Filename:   C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\Aula 26AGO21\Teste_LED_Wizard\main.lst
+
+               ROM used:   88 bytes (0%)
+                           Largest free fragment is 32680
+               RAM used:   4 (0%) at main() level
+                           5 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   0020
+.................... #include <main.h>
+.................... #include <18F4520.h>
+.................... //////////// Standard Header file for the PIC18F4520 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F4520
+.................... 
+.................... #list
+.................... 
+.................... 
+.................... #use delay(internal=1MHz)
+0004:  CLRF   FEA
+0006:  MOVLW  05
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BTFSC  FD8.2
+000E:  GOTO   001E
+0012:  MOVLW  52
+0014:  MOVWF  00
+0016:  DECFSZ 00,F
+0018:  BRA    0016
+001A:  DECFSZ FEF,F
+001C:  BRA    0012
+001E:  RETURN 0
+.................... 
+.................... #define LED 		PIN_A0
+.................... #define DELAY 	100
+.................... 
+.................... 
+.................... 
+.................... 
+.................... void main()
+0020:  CLRF   FF8
+0022:  BCF    FD0.7
+0024:  MOVLW  40
+0026:  MOVWF  FD3
+0028:  CLRF   F9B
+002A:  MOVF   FD3,W
+002C:  MOVF   FC1,W
+002E:  ANDLW  C0
+0030:  IORLW  0F
+0032:  MOVWF  FC1
+0034:  MOVLW  07
+0036:  MOVWF  FB4
+.................... {
+.................... 	setup_adc_ports(NO_ANALOGS, VSS_VDD);
+0038:  MOVF   FC1,W
+003A:  ANDLW  C0
+003C:  IORLW  0F
+003E:  MOVWF  FC1
+.................... 
+.................... 	while(TRUE)
+.................... 	{
+.................... 
+.................... 		//Example blinking LED program
+.................... 		output_low(LED);
+0040:  BCF    F92.0
+0042:  BCF    F89.0
+.................... 		delay_ms(DELAY);
+0044:  MOVLW  64
+0046:  MOVWF  05
+0048:  RCALL  0004
+.................... 		output_high(LED);
+004A:  BCF    F92.0
+004C:  BSF    F89.0
+.................... 		delay_ms(DELAY);
+004E:  MOVLW  64
+0050:  MOVWF  05
+0052:  RCALL  0004
+0054:  BRA    0040
+.................... 
+.................... 		//TODO: User Code
+.................... 	}
+.................... 
+.................... }
+0056:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C800   INTRC_IO FCMEN IESO
+   Word  2: 1E1E   PUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

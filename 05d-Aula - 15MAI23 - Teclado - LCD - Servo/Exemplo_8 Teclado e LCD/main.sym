@@ -1,0 +1,111 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     kbd_getc.kbd_call_count
+005.0   kbd_getc.kbd_down
+006     kbd_getc.last_key
+007     kbd_getc.col
+008-009 @sprintf_string
+00A     MAIN.k
+00B     kbd_getc.kchar
+00B     lcd_init.i
+00B     @PSTRINGC_769.@SCRATCH1
+00C-00F lcd_init.LCD_INIT_STRING
+00C     kbd_getc.row
+00C     @PSTRINGC_769.@SCRATCH2
+00D     lcd_putc.c
+00D     kbd_getc.@SCRATCH1
+00E     lcd_gotoxy.x
+00E     kbd_getc.@SCRATCH2
+00F     lcd_gotoxy.y
+010     lcd_gotoxy.address
+010     @delay_ms1.P1
+010     lcd_init.@SCRATCH1
+011     lcd_gotoxy.@SCRATCH1
+012     lcd_send_byte.address
+013     lcd_send_byte.n
+014     lcd_read_byte.low
+014     lcd_send_byte.@SCRATCH1
+015     lcd_send_nibble.n
+015     lcd_read_byte.high
+016     lcd_read_byte.@SCRATCH1
+F81     lcd
+F83     kbd
+F83     PSP_DATA
+F8A     lcdlat
+F93     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  KEYS.call
+000014  KEYS.data
+000020  @const785.call
+000034  kbd_init
+000038  @delay_ms1
+000066  lcd_send_nibble
+000082  lcd_read_nibble
+00008E  lcd_read_byte
+0000CE  lcd_send_byte
+000108  lcd_init
+00017C  lcd_gotoxy
+00019E  lcd_putc
+0001EE  @PSTRINGC_769
+000210  kbd_getc
+0002C0  @cinit1
+0002C0  MAIN
+0002DC  @cinit2
+
+Project Directory:
+    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Teclado e LCD\
+
+Project Files:
+    main.c                                                  [20-ago-21 23:56  CRC=41100BBE]
+    main.h                                                  [20-ago-21 23:18  CRC=D872A938]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h [06-jan-21 18:55  CRC=C3D160C1]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C [25-mai-15 21:33  CRC=7C81F56B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=FD227A36
+Program memory checksum=0000
+Hex file CRC=9400
+
+Units:
+    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Teclado e LCD\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
