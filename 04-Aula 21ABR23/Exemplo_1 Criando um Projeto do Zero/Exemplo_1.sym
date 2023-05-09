@@ -1,0 +1,65 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.@SCRATCH1
+006     @delay_ms1.P1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+00002E  @cinit1
+00002E  main
+000046  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_1\Sistemas Embarcados 2\04-Aula 20MAI22\Exemplo_1 Criando um Projeto do Zero\
+
+Project Files:
+    Exemplo_1.c                                             [20-ago-21 08:01  CRC=D872A938]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+
+Source signature=60156ABA
+Program memory checksum=0000
+Hex file CRC=E7D8
+
+Units:
+    G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_1\Sistemas Embarcados 2\04-Aula 20MAI22\Exemplo_1 Criando um Projeto do Zero\Exemplo_1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Exemplo_1.xsym
+    Errors:      Exemplo_1.err
+    Ext Symbols: Exemplo_1.esym
+    INHX32:      Exemplo_1.hex
+    Symbols:     Exemplo_1.sym
+    List:        Exemplo_1.lst
+    Debug/COFF:  Exemplo_1.cof
+    Project:     Exemplo_1.ccspjt
+    Call Tree:   Exemplo_1.tre
+    Statistics:  Exemplo_1.STA

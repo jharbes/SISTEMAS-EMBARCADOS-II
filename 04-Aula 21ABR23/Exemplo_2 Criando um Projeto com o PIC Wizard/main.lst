@@ -1,0 +1,127 @@
+CCS PCH C Compiler, Version 5.099, 54900               17-dez-21 18:57
+
+               Filename:   C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.2\Sistemas Embarcados 2\3-Aula 10DEZ21\Exemplo_2 Criando um Projeto com o PIC Wizard\main.lst
+
+               ROM used:   126 bytes (0%)
+                           Largest free fragment is 32642
+               RAM used:   5 (0%) at main() level
+                           6 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   0036
+.................... #include <main.h>
+.................... #include <18F4520.h>
+.................... //////////// Standard Header file for the PIC18F4520 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F4520
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... 
+.................... #FUSES NOWDT                 	//No Watch Dog Timer
+.................... 
+.................... #use delay(internal=8MHz,restart_wdt)
+0004:  CLRF   FEA
+0006:  MOVLW  06
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BTFSC  FD8.2
+000E:  GOTO   0034
+0012:  MOVLW  02
+0014:  MOVWF  01
+0016:  MOVLW  BF
+0018:  MOVWF  00
+001A:  CLRWDT
+001C:  DECFSZ 00,F
+001E:  BRA    001A
+0020:  DECFSZ 01,F
+0022:  BRA    0016
+0024:  MOVLW  96
+0026:  MOVWF  00
+0028:  DECFSZ 00,F
+002A:  BRA    0028
+002C:  BRA    002E
+002E:  CLRWDT
+0030:  DECFSZ FEF,F
+0032:  BRA    0012
+0034:  RETURN 0
+.................... 
+.................... #define LED PIN_B0
+.................... #define DELAY 1000
+.................... 
+.................... 
+.................... 
+.................... 
+.................... void main()
+0036:  CLRF   FF8
+0038:  BCF    FD0.7
+003A:  MOVLW  70
+003C:  MOVWF  FD3
+003E:  CLRF   F9B
+0040:  MOVF   FD3,W
+0042:  MOVF   FC1,W
+0044:  ANDLW  C0
+0046:  IORLW  0F
+0048:  MOVWF  FC1
+004A:  MOVLW  07
+004C:  MOVWF  FB4
+.................... {
+.................... 	setup_adc_ports(NO_ANALOGS, VSS_VDD);
+004E:  MOVF   FC1,W
+0050:  ANDLW  C0
+0052:  IORLW  0F
+0054:  MOVWF  FC1
+.................... 
+.................... 	while(TRUE)
+.................... 	{
+.................... 
+.................... 		//Example blinking LED program
+.................... 		output_low(LED);
+0056:  BCF    F93.0
+0058:  BCF    F8A.0
+.................... 		delay_ms(DELAY);
+005A:  MOVLW  04
+005C:  MOVWF  05
+005E:  MOVLW  FA
+0060:  MOVWF  06
+0062:  RCALL  0004
+0064:  DECFSZ 05,F
+0066:  BRA    005E
+.................... 		output_high(LED);
+0068:  BCF    F93.0
+006A:  BSF    F8A.0
+.................... 		delay_ms(DELAY);
+006C:  MOVLW  04
+006E:  MOVWF  05
+0070:  MOVLW  FA
+0072:  MOVWF  06
+0074:  RCALL  0004
+0076:  DECFSZ 05,F
+0078:  BRA    0070
+007A:  BRA    0056
+.................... 
+.................... 		//TODO: User Code
+.................... 	}
+.................... 
+.................... }
+007C:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C800   INTRC_IO FCMEN IESO
+   Word  2: 1E1E   PUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

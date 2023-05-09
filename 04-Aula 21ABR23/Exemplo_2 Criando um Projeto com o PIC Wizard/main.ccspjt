@@ -1,0 +1,49 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F4520
+CCSVerions=5.099c
+Compiler=PCH
+CCSVersion=5.099
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Exemplo_2\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=20-08-2021
+D1_L=2
+D1_L1=[47012]Project Opened.
+D1_L2=[54368]Project Closed.
+D2=17-12-2021
+D2_L=4
+D2_L1=[68199]Project Opened.
+D2_L2=[68248]Started Editing.
+D2_L3=[68549]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D2_E=1
+D2_D=0
+D2_L4=[70493]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+2=main.h
+t2=1
+Count=2
+[main.c]
+Type=4
+
+[defines]
+buildcount=2
+[Units]
+Count=1
+1=main (main)

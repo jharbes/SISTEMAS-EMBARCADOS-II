@@ -1,0 +1,5 @@
+Compiling G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_1\Sistemas Embarcados 2\04-Aula 20MAI22\Exemplo_1 Criando um Projeto do Zero\Exemplo_1 on 03-jun-22 at 18:37
+>>> Warning 203 "G:\Meu Drive\CEFET 2022\Sistemas de Informação 2022_1\Sistemas Embarcados 2\04-Aula 20MAI22\Exemplo_1 Criando um Projeto do Zero\Exemplo_1.c" Line 7(1,1): Condition always TRUE
+      Memory usage:   ROM=0%      RAM=0% - 0%
+      0 Errors,  1 Warnings.
+Build Successful.

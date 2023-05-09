@@ -1,0 +1,90 @@
+[Directories]
+Include=<default>
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=4
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=Exemplo_1.hex
+Development_Mode=
+Processor_Text=PIC18F4520
+ToolSuite=CCS
+CCSVersion=5.099
+Compiler=PCH
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+FileList=Exemplo_1.c
+
+[Exemplo_1.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Exemplo_1.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=Exemplo_1.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=3
+D1=20-08-2021
+D1_L=9
+D1_L1=[29252]Project Closed.
+D1_L2=[29252]Project Opened.
+D1_L3=[29443]Project Closed.
+D1_L4=[29456]Project Opened.
+D1_L5=[29461]Project Closed.
+D1_L6=[29621]Project Opened.
+D1_L7=[29680]Project Closed.
+D1_L8=[29680]Project Opened.
+D1_L9=[30973]Project Closed.
+D2=20-05-2022
+D2_L=2
+D2_L1=[66260]Project Opened.
+D2_L2=[72579]Project Closed.
+D3=03-06-2022
+D3_L=2
+D3_L1=[67026]Project Opened.
+D3_L2=[67157]Project Closed.
+[Units]
+Count=1
+1=Exemplo_1 (main)
