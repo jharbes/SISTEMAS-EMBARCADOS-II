@@ -1,0 +1,43 @@
+#include <main.h>
+#include <lcd.c>
+
+void main(){
+	setup_adc_ports(AN0_TO_AN2, VSS_VDD); // Configura AN0, AN1 e AN2 como entradas analógicas
+	setup_adc(ADC_CLOCK_INTERNAL | ADC_TAD_MUL_20);// Inicia o conersor A/D            
+
+  set_adc_channel(0);                       // Seleciona o canal do conersor A/D para AN0
+  lcd_init();
+	lcd_putc("\fPartida...\n");
+	delay_ms(1000);
+
+	while(TRUE){
+	 set_adc_channel(0);                       // Seleciona o canal do conersor A/D para AN0
+   Vin_0= read_adc();                        // Leia o valor do canal 0 em bináriode 10 bits
+   set_adc_channel(1);                       // Seleciona o canal do conersor A/D para AN1
+   Vin_1= read_adc();                        // Leia o valor do canal 1 em bináriode 10 bits   
+   set_adc_channel(2);                       // Seleciona o canal do conersor A/D para AN2
+   Vin_2= read_adc();                        // Leia o valor do canal 2 em binário de 10 bits
+   
+  // Calcula os valores de V_0, V_1 e V_2 em volts
+  V_0=(Vin_0*5)/1024;
+  V_1=(Vin_1*5)/1024;   
+  V_2=(Vin_2*5)/1024;
+       	
+	// Envia os valores em binário de AN0, AN1 e AN2 para a saída serial com 4 algarismos inteiros e sem casas decimais
+	#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1)
+  printf("%4.0g  %4.0g  %4.0g\r\n",Vin_0,Vin_1,Vin_2);// enviado para o Terminal 1
+                                                         
+  // Envia os valores de V_0, V_1 e V_2 em volts para a saída serial com 1 algarismo inteiros e duas casas decimais
+  //#use rs232(baud=9600,parity=N,xmit=PIN_C4,rcv=PIN_C5,bits=8) 
+  #use rs232(baud=9600,parity=N,xmit=PIN_C4,rcv=PIN_C5,bits=8,stream=PORT2,FORCE_SW)// enviado para o Terminal 2
+  printf("V_0=%1.2gV  V_1=%6.1gV  V_2=%1.2gV\r\n",V_0,V_1,V_2);// V_1 vai ocupar 6 espaços 
+  																														// com uma casa decimal e o ponto decimal conta																												 	
+  printf(lcd_putc,"\fV0=%1.2gV V1=%1.2gV \n",V_0,V_1);// escreve no LCD formatado 	
+  printf(lcd_putc,"V2=%1.2gV",V_2); 	
+  
+  //#use rs232(baud=9600,parity=N,xmit=PIN_C2,rcv=PIN_C3,bits=8,stream=PORT2,FORCE_SW)// enviado para o Terminal 3
+  #use rs232(baud=19200,xmit=PIN_C2,rcv=PIN_C3)// enviado para o Terminal 3
+  printf("Aula de Microcontroldores\r"); 
+  delay_ms(1000);
+	}
+}

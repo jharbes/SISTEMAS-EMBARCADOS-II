@@ -1,0 +1,10 @@
+#include <18F4520.h>
+#device ADC=10
+
+#FUSES NOWDT                 	//No Watch Dog Timer
+
+#use delay(internal=8MHz,restart_wdt)
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1)
+#use rs232(baud=9600,parity=N,xmit=PIN_C5,rcv=PIN_C4,bits=8,stream=PORT2,FORCE_SW)
+#use rs232(baud=9600,parity=N,xmit=PIN_C3,rcv=PIN_C2,bits=8,stream=PORT3,FORCE_SW)
+
