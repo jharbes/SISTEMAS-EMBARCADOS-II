@@ -1,5 +1,0 @@
-Compiling C:\Users\wvair\Dropbox\CEFET\4AATMINT_2021_1\Sistemas De Controle Digitais\Aula_12 18OUT21\Projeto_RPM\RPM_METER on 18-out-21 at 10:50
->>> Warning 216 "C:\Users\wvair\Dropbox\CEFET\4AATMINT_2021_1\Sistemas De Controle Digitais\Aula_12 18OUT21\Projeto_RPM\RPM_METER.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (tick_difference)
-      Memory usage:   ROM=11%      RAM=6% - 8%
-      0 Errors,  1 Warnings.
-Build Successful.

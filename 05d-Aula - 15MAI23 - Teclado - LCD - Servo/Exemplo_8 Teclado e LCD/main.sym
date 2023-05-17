@@ -9,8 +9,9 @@
 007     kbd_getc.col
 008-009 @sprintf_string
 00A     MAIN.k
-00B     kbd_getc.kchar
 00B     lcd_init.i
+00B     kbd_getc.kchar
+00B     MAIN.@SCRATCH1
 00B     @PSTRINGC_769.@SCRATCH1
 00C-00F lcd_init.LCD_INIT_STRING
 00C     kbd_getc.row
@@ -20,16 +21,16 @@
 00E     lcd_gotoxy.x
 00E     kbd_getc.@SCRATCH2
 00F     lcd_gotoxy.y
-010     lcd_gotoxy.address
 010     @delay_ms1.P1
+010     lcd_gotoxy.address
 010     lcd_init.@SCRATCH1
 011     lcd_gotoxy.@SCRATCH1
 012     lcd_send_byte.address
 013     lcd_send_byte.n
 014     lcd_read_byte.low
 014     lcd_send_byte.@SCRATCH1
-015     lcd_send_nibble.n
 015     lcd_read_byte.high
+015     lcd_send_nibble.n
 016     lcd_read_byte.@SCRATCH1
 F81     lcd
 F83     kbd
@@ -38,56 +39,59 @@ F8A     lcdlat
 F93     lcdtris
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @READ_PACKED_MEMORY.P1
-FE1-FE2 @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
 FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @READ_PACKED_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000004  KEYS.call
 000014  KEYS.data
 000020  @const785.call
-000034  kbd_init
-000038  @delay_ms1
-000066  lcd_send_nibble
-000082  lcd_read_nibble
-00008E  lcd_read_byte
-0000CE  lcd_send_byte
-000108  lcd_init
-00017C  lcd_gotoxy
-00019E  lcd_putc
-0001EE  @PSTRINGC_769
-000210  kbd_getc
-0002C0  @cinit1
-0002C0  MAIN
-0002DC  @cinit2
+000034  @const790.call
+000048  @const791.call
+00004A  @const792.call
+00005A  kbd_init
+00005E  @delay_ms1
+000084  lcd_send_nibble
+00009E  lcd_read_nibble
+0000AA  lcd_read_byte
+0000E8  lcd_send_byte
+000122  lcd_init
+000196  lcd_gotoxy
+0001B8  lcd_putc
+000208  @PSTRINGC_769
+000228  kbd_getc
+0002D8  @cinit1
+0002D8  MAIN
+0002F4  @cinit2
 
 Project Directory:
-    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Teclado e LCD\
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\05d-Aula - 15MAI23 - Teclado - LCD - Servo\Exemplo_8 Teclado e LCD\
 
 Project Files:
-    main.c                                                  [20-ago-21 23:56  CRC=41100BBE]
-    main.h                                                  [20-ago-21 23:18  CRC=D872A938]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h [06-jan-21 18:55  CRC=C3D160C1]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C [25-mai-15 21:33  CRC=7C81F56B]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-fev-16 09:05  CRC=D1A6378A]
+    main.c                                                  [15-mai-23 09:33  CRC=91197B23]
+    main.h                                                  [15-mai-23 09:24  CRC=00000000]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+    C:\Program Files (x86)\PICC\Drivers\KBD.C               [25-mai-15 21:33  CRC=7C81F56B]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-fev-16 09:05  CRC=D1A6378A]
 
-Source signature=FD227A36
+Source signature=74B94063
 Program memory checksum=0000
-Hex file CRC=9400
+Hex file CRC=8483
 
 Units:
-    C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Teclado e LCD\main (main)
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\05d-Aula - 15MAI23 - Teclado - LCD - Servo\Exemplo_8 Teclado e LCD\main (main)
 
 Compiler Settings:
     Processor:      PIC18F4520

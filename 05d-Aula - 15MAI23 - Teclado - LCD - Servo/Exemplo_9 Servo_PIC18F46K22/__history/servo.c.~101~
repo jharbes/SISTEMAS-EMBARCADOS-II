@@ -5,9 +5,13 @@
 
 char mystring[20]="    ";
 char fim_mystring[15]="    ";
+char *ponteiro;
 int16 angulo_inteiro;
+float angulo;
+float angulo_flutuante;
 
 float valor;
+int16 duty;
 float tensao=5.35;
   
 int16 servo1_cmd;

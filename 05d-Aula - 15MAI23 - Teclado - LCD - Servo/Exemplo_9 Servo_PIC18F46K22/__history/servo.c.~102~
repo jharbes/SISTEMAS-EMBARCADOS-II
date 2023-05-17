@@ -5,6 +5,7 @@
 
 char mystring[20]="    ";
 char fim_mystring[15]="    ";
+char *ponteiro;
 int16 angulo_inteiro;
 
 float valor;

@@ -11,6 +11,7 @@
      <ITEM name="Message Column Width">661</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
+     <ITEM name="Time Column Width">120</ITEM>
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
@@ -31,10 +32,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="966" flags="00000001" y="47" h="459" pid="0" iid="35">
+   <POPUP w="695" x="1345" flags="00008001" y="344" h="459" pid="0" iid="35">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="583" x="191" flags="00008023" y="183" h="250" pid="0" iid="25">
+   <POPUP w="583" x="226" flags="00000023" y="84" h="250" pid="0" iid="25">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>

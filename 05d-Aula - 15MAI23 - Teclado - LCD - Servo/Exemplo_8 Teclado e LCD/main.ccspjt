@@ -4,10 +4,19 @@ Processor_Text=PIC18F4520
 CCSVerions=5.099c
 Compiler=PCH
 CCSVersion=5.099
+Development_Mode=
+ToolSuite=CCS
 [Target Data]
 FileList=main.c
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
 [Directories]
 Include=
+Library=
+LinkerScript=
+output=
 [C:\Users\wvair\Google Drive\Especialização em Mecatrônica EAD IPETEC 2019\Robótica Industrial\Microcontroladores PIC\Exemplos\Teclado e LCD\main]
 Type=4
 [mru-list]
@@ -15,9 +24,21 @@ Type=4
 
 [fileformats]
 forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
 
 [ProjectLog]
-Days=5
+Days=6
 D1=20-08-2021
 D1_L=8
 D1_L1=[83915]Project Opened.
@@ -25,7 +46,7 @@ D1_L2=[84646]Started Editing.
 D1_L3=[85637]Stopped Editing.
 D1_L4=[86053]Started Editing.
 D1_L5=[86194]Stopped Editing.
-TotalEdit=29
+TotalEdit=39
 TotalDebug=0
 D1_E=14
 D1_D=0
@@ -54,13 +75,23 @@ D5=10-12-2022
 D5_L=2
 D5_L1=[36304]Project Opened.
 D5_L2=[36335]Project Closed.
+D6=15-05-2023
+D6_L=6
+D6_L1=[33779]Project Opened.
+D6_L2=[33790]Project Closed.
+D6_L3=[33790]Project Opened.
+D6_L4=[33831]Started Editing.
+D6_L5=[34674]Stopped Editing.
+D6_E=10
+D6_D=0
+D6_L6=[59058]Project Closed.
 
 [Opened Files]
 1=main.c
-t1=1
+t1=17
 2=main.h
 t2=1
-Count=5
+Count=2
 3=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h
 t3=1
 4=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C
@@ -69,9 +100,24 @@ t4=1
 t5=1
 [main.c]
 Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
 
 [defines]
-buildcount=8
+buildcount=16
+enabled=0
+chip=1
+D1=
+V1=
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+[CompilerVersion]
+Fixed=
 [Units]
 Count=1
 1=main (main)

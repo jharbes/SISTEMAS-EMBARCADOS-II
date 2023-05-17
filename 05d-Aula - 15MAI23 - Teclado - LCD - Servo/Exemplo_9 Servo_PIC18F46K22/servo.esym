@@ -1,10 +1,9 @@
-C L "MAIN" 0 6 1 "FUNCTION"
-D G "__PCH__" 0 79 ""5.099""
-D G "__DEVICE__" 0 79 "4622"
-D G "__DATE__" 0 79 ""21-Aug-21""
-D G "__TIME__" 0 79 ""15:50:56""
-D G "_UNICODE" 0 79 ""?""
-D G "__EVAL" 0 79 ""?"" "Standard Header file for the PIC18F46K22 device ////////////////"
+D G "__PCH__" 0 67 ""5.099""
+D G "__DEVICE__" 0 67 "4622"
+D G "__DATE__" 0 67 ""15-May-23""
+D G "__TIME__" 0 67 ""16:57:32""
+D G "_UNICODE" 0 67 ""?""
+D G "__EVAL" 0 67 ""?"" "Standard Header file for the PIC18F46K22 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 F N "set_tris_a" 2 45 ""
 V L "value" 2 45 "int8" `55 
@@ -1528,13 +1527,13 @@ D G "INT_RB4" 2 1059 "0x110F208"
 D G "INT_RB5" 2 1060 "0x120F208"
 D G "INT_RB6" 2 1061 "0x140F208"
 D G "INT_RB7" 2 1062 "0x180F208"
-D G "LCD_ENABLE_PIN" 1 15 "PIN_E1"
-D G "LCD_RS_PIN" 1 16 "PIN_E0"
-D G "LCD_RW_PIN" 1 17 "PIN_E2"
-D G "LCD_DATA4" 1 18 "PIN_D4"
-D G "LCD_DATA5" 1 19 "PIN_D5"
-D G "LCD_DATA6" 1 20 "PIN_D6"
-D G "LCD_DATA7" 1 21 "PIN_D7"
+D G "LCD_ENABLE_PIN" 1 8 "PIN_E1"
+D G "LCD_RS_PIN" 1 9 "PIN_E0"
+D G "LCD_RW_PIN" 1 10 "PIN_E2"
+D G "LCD_DATA4" 1 11 "PIN_D4"
+D G "LCD_DATA5" 1 12 "PIN_D5"
+D G "LCD_DATA6" 1 13 "PIN_D6"
+D G "LCD_DATA7" 1 14 "PIN_D7"
 D G "__INPUT_C__" 3 57 ""
 D G "_CTYPE" 4 12 ""
 D G "islower" 4 14 "(x)  isamong(x,"abcdefghijklmnopqrstuvwxyz")"
@@ -2078,29 +2077,23 @@ V L "on" 8 443 "int8" `1120
 F G "lcd_cursor_on" 8 444 "void(int8 on)" `1119 
 C L "lcd_cursor_on" 8 2 1 "FUNCTION"
 C L "lcd_cursor_on" 8 2 1 "FUNCTION"
-V G "mystring" 0 7 "int8[20]" `1121 
-V G "fim_mystring" 0 8 "int8[15]" `1122 
-V G "ponteiro" 0 9 "*int8" `1123 
-V G "angulo_inteiro" 0 10 "int16" `1124 
-V G "angulo" 0 11 "float" `1125 
-V G "angulo_flutuante" 0 12 "float" `1126 
-V G "valor" 0 14 "float" `1127 
-V G "duty" 0 15 "int16" `1128 
-V G "tensao" 0 16 "float" `1129 
-V G "servo1_cmd" 0 18 "int16" `1130 
-V G "servo2_cmd" 0 19 "int16" `1131 
-D G "max" 0 21 "4"
-F N "TIMER1_isr" 0 24 ""
-F G "TIMER1_isr" 0 25 "void()" `1132 
-C L "TIMER1_isr" 0 6 1 "FUNCTION"
-C L "TIMER1_isr" 0 6 1 "FUNCTION"
-C L "TIMER1_isr" 0 6 1 "FUNCTION"
-F N "MAIN" 0 43 ""
-F G "MAIN" 0 44 "void()" `1146 
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 3 "FUNCTION"
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 2 "FUNCTION"
+V G "mystring" 0 6 "int8[20]" `1121 
+V G "fim_mystring" 0 7 "int8[15]" `1122 
+V G "angulo_inteiro" 0 8 "int16" `1123 
+V G "valor" 0 10 "float" `1124 
+V G "tensao" 0 11 "float" `1125 
+V G "servo1_cmd" 0 13 "int16" `1126 
+V G "servo2_cmd" 0 14 "int16" `1127 
+D G "max" 0 16 "4"
+F N "TIMER1_isr" 0 19 ""
+F G "TIMER1_isr" 0 20 "void()" `1128 
+C L "TIMER1_isr" 0 24 1 "FUNCTION"
+C L "TIMER1_isr" 0 24 1 "FUNCTION"
+C L "TIMER1_isr" 0 24 1 "FUNCTION"
+F N "MAIN" 0 38 ""
+F G "MAIN" 0 39 "void()" `1142 
+C L "MAIN" 0 24 1 "FUNCTION"
+C L "MAIN" 0 24 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

@@ -28,8 +28,8 @@ Type=4
 4=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\input.c
 5=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 6=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\STDLIB.H
-t1=1
-Count=9
+t1=2
+Count=2
 t2=1
 t3=1
 t4=1
@@ -66,13 +66,13 @@ stayupne=3
 stayupoe=0
 
 [ProjectLog]
-Days=6
+Days=7
 D1=10-06-2018
 D1_L=4
 D1_L1=[85332]Project Opened.
 D1_L2=[85443]Started Editing.
 D1_L3=[85750]Stopped Editing.
-TotalEdit=58
+TotalEdit=76
 TotalDebug=0
 D1_E=6
 D1_D=0
@@ -117,9 +117,20 @@ D6=21-08-2021
 D6_L=2
 D6_L1=[56796]Project Opened.
 D6_L2=[58383]Project Closed.
+D7=15-05-2023
+D7_L=7
+D7_L1=[59058]Project Opened.
+D7_L2=[59211]Project Opened.
+D7_L3=[59444]Started Editing.
+D7_L4=[59954]Stopped Editing.
+D7_L5=[60225]Started Editing.
+D7_L6=[61074]Stopped Editing.
+D7_E=18
+D7_D=0
+D7_L7=[61074]Project Closed.
 
 [defines]
-buildcount=33
+buildcount=48
 enabled=0
 chip=1
 D1=
@@ -132,5 +143,4 @@ V1=
 Fixed=
 [Units]
 Count=1
-1=servo
-Link=0
+1=servo (main)

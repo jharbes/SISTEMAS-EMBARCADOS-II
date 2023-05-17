@@ -5,9 +5,13 @@
 
 char mystring[20]="    ";
 char fim_mystring[15]="    ";
+char *ponteiro;
 int16 angulo_inteiro;
+float angulo;
+float angulo_flutuante;
 
 float valor;
+int16 duty;
 float tensao=5.35;
   
 int16 servo1_cmd;
@@ -40,7 +44,9 @@ void main()
 setup_adc(ADC_CLOCK_INTERNAL);
 setup_adc_ports(sAN0);
 setup_timer_1(T1_INTERNAL|T1_DIV_BY_1); // (1/2)MHz * 65636 = 32,7 ms overflow
-
+enable_interrupts(INT_TIMER1);
+enable_interrupts(GLOBAL);
+     
 set_adc_channel(0); 
 
 lcd_init();
@@ -49,7 +55,6 @@ LCD_putc("Projeto  SERVO\n\r");
 delay_ms(1000);
 
 enable_interrupts(INT_TIMER1);
-enable_interrupts(GLOBAL);
 
    while(1){  
    

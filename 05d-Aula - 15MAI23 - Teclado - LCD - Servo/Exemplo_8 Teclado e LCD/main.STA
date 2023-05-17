@@ -1,60 +1,63 @@
 
-ROM used:   796/32768 (2%)
-            796/32768 (2%) including unused fragments
+ROM used:   866/32768 (3%)
+            866/32768 (3%) including unused fragments
 
-            0.5 Average locations per line
-            5.9 Average locations per statement
+            0.6 Average locations per line
+            6.2 Average locations per statement
 
-RAM used:   11/1536 (1%) at main() level
+RAM used:   12/1536 (1%) at main() level
             23/1536 (1%) worst case
 
-Stack used: 4 worst case (4 in main + 0 for interrupts)
+Stack used: 5 worst case (5 in main + 0 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   35    11   8  main.c
-    8     0   0  main.h
-  879     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h
-  135    40  30  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C
-  456    84  62  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+   40    16  11  main.c
+    5     0   0  main.h
+  879     0   0  C:\Program Files (x86)\PICC\Devices\18F4520.h
+  135    40  29  C:\Program Files (x86)\PICC\Drivers\KBD.C
+  456    84  60  C:\Program Files (x86)\PICC\Drivers\lcd.c
 ----- -----
- 1513   135 Total
+ 1515   140 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     46   3    1             @delay_ms1
+0     38   2    1             @delay_ms1
 0     28   2    0             @const732
 0      4   0    0      3  0.0  kbd_init
-0    176  11    4   4547 10.1  kbd_getc
-0     64   4    3    596  5.9  lcd_read_byte
+0    176  10    4   4547 10.1  kbd_getc
+0     62   4    3    596  5.9  lcd_read_byte
 0     12   1    0     59  4.2  lcd_read_nibble
-0     28   2    1    179  3.3  lcd_send_nibble
-0     58   4    3    460  4.7  lcd_send_byte
+0     26   2    1    179  3.3  lcd_send_nibble
+0     58   3    3    460  4.7  lcd_send_byte
 0    116   7    6    814  7.2  lcd_init
 0     34   2    4    208  6.3  lcd_gotoxy
 0     80   5    1    354  4.7  lcd_putc
-0     92   6    1    247  4.3  MAIN
+0    138   8    2    364  4.5  MAIN
 0     20   1    0             @const785
-0     34   2    2             @PSTRINGC_769
+0     32   2    2             @PSTRINGC_769
+0     20   1    0             @const790
+0      2   0    0             @const791
+0     16   1    0             @const792
  Inline         0             @cinit1
 
 Program metrics:
     Functions               10
-    Statements              135
+    Statements              140
     Comments                286
-    Volume (V)              10134
-    Difficulty (D)          49.8
-    Effort to implement (E) 504511
-    Time to implement (T)   7 hours, 47 minutes
+    Volume (V)              10340
+    Difficulty (D)          49.4
+    Effort to implement (E) 511122
+    Time to implement (T)   7 hours, 53 minutes
     Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   22
-    Maintainability (MI)    138
+    Cyclomatic Complexity   23
+    Maintainability (MI)    137
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
-00004-07FFE   792  31972  
+00004-07FFE   862  31902  
 
 
 

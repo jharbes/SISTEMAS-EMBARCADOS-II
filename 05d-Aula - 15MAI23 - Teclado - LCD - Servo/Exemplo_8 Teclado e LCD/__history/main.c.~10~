@@ -24,13 +24,11 @@ void main()
 		//Example using external LCD
 		k = kbd_getc();
 		if(k!=0)
-			if(k=='*'){
-				lcd_putc("\fLimpando display\n");
-				delay_ms(1000);
-				lcd_putc("\f");
-				}
+			if(k=='*')
+				lcd_putc('\f');
+			 	
 			else if(k=='#')
-				lcd_putc("\fTeclado CEFET\n");
+				lcd_putc("\fTeclado CEFET");
 			else
 				lcd_putc(k);
 

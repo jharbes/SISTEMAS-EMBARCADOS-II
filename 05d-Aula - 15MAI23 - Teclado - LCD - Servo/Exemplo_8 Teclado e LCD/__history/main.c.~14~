@@ -27,8 +27,8 @@ void main()
 			if(k=='*'){
 				lcd_putc("\fLimpando display\n");
 				delay_ms(1000);
-				lcd_putc("\f");
-				}
+				//lcd_putc("\f");
+			}
 			else if(k=='#')
 				lcd_putc("\fTeclado CEFET\n");
 			else
