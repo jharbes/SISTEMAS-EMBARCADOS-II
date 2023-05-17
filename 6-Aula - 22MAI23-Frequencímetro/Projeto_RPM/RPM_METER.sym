@@ -1,0 +1,195 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A-01B UPPER_TICKS_1
+01C-01F metros
+020-023 kilometros
+024-027 periodo_RPM
+028-02B periodo_roda
+02C-02F x_RPM
+030-033 velocidade
+034-037 current_tick_RPM
+038-03B previous_tick_RPM
+03C-03F current_tick_RPM_WDT
+040-043 previous_tick_RPM_WDT
+044-047 current_tick_roda
+048-04B previous_tick_roda
+04C-04D @sprintf_string
+04E-051 MAIN.valor
+052-055 MAIN.tensao
+056-057 @ITOF.P1
+056     @PSTRINGCN_759.P2
+056-059 @PRINTF_L32D_759FPFPF.P3
+056-059 @DTOF.P4
+056     lcd_init.i
+056     MAIN.@SCRATCH1
+056     @PSTRINGC_759.@SCRATCH1
+057-05A lcd_init.LCD_INIT_STRING
+057     MAIN.@SCRATCH2
+057     @PSTRINGC_759.@SCRATCH2
+057     @PSTRINGCN_759.@SCRATCH1
+058     MAIN.@SCRATCH3
+058     @PSTRINGCN_759.@SCRATCH2
+059     MAIN.@SCRATCH4
+05A     @PRINTF_L32D_759FPFPF.P1
+05A-05D @DIVFF.P2
+05A     MAIN.@SCRATCH5
+05B     lcd_init.@SCRATCH1
+05B     MAIN.@SCRATCH6
+05B     @PRINTF_L32D_759FPFPF.@SCRATCH1
+05C     MAIN.@SCRATCH7
+05C     @PRINTF_L32D_759FPFPF.@SCRATCH2
+05D     MAIN.@SCRATCH8
+05D     @PRINTF_L32D_759FPFPF.@SCRATCH3
+05E-061 @DIVFF.P1
+05E     @PRINTF_L32D_759FPFPF.@SCRATCH4
+05F     @PRINTF_L32D_759FPFPF.@SCRATCH5
+060     @PRINTF_L32D_759FPFPF.@SCRATCH6
+061     @PRINTF_L32D_759FPFPF.@SCRATCH7
+062     @DIVFF.@SCRATCH1
+062     @PRINTF_L32D_759FPFPF.@SCRATCH8
+063     lcd_putc.c
+063-066 @DIV3232.P1
+063-066 @MULFF.P2
+063-066 @FTOSD.P3
+063     @DIVFF.@SCRATCH2
+064     lcd_gotoxy.x
+064     @delay_ms1.P1
+064     @DIVFF.@SCRATCH3
+065     lcd_gotoxy.y
+065     @DIVFF.@SCRATCH4
+066     lcd_gotoxy.address
+066     @DIVFF.@SCRATCH5
+067-06A @MULFF.P1
+067-06A @DIV3232.P2
+067     lcd_gotoxy.@SCRATCH1
+067     @DIVFF.@SCRATCH6
+067     @FTOSD.@SCRATCH1
+068     lcd_send_byte.address
+069     lcd_send_byte.n
+06A     lcd_read_byte.low
+06A     lcd_send_byte.@SCRATCH1
+06B     lcd_read_byte.high
+06B     lcd_send_nibble.n
+06B     @MULFF.@SCRATCH1
+06B     @DIV3232.@SCRATCH1
+06C     lcd_read_nibble.n
+06C     lcd_read_byte.@SCRATCH1
+06C     @MULFF.@SCRATCH2
+06C     @DIV3232.@SCRATCH2
+06D     lcd_read_nibble.@SCRATCH1
+06D     @MULFF.@SCRATCH3
+06D     @DIV3232.@SCRATCH3
+06E     @DIV3232.@SCRATCH4
+06F     @DIV3232.@SCRATCH5
+070-073 tick_difference.current
+074-077 tick_difference.previous
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000C6  @TIMERISR_1
+0000D2  @GET_TICKS_1
+000102  tick_difference
+00011C  EXT_isr
+000188  EXT2_isr
+0001EE  @const793.call
+000202  @const798.call
+000214  @const812.call
+000228  @const820.call
+000238  @delay_ms1
+000260  lcd_send_nibble
+00029E  lcd_read_nibble
+0002F0  lcd_read_byte
+00033A  lcd_send_byte
+000380  lcd_init
+0003FC  lcd_gotoxy
+00041E  lcd_putc
+00046E  @PSTRINGC_759
+00048E  @ITOF
+0004C6  @MULFF
+0005B8  @DIVFF
+000712  @DIV3232
+0007A0  @DTOF
+0007D4  @FTOSD
+000814  @PRINTF_L32D_759FPFPF
+00098C  @PSTRINGCN_759
+0009AA  MAIN
+0009AA  @cinit1
+000A2C  @cinit2
+
+Project Directory:
+    C:\Users\wvair\Dropbox\CEFET\4AATMINT_2021_1\Sistemas De Controle Digitais\Aula_12 18OUT21\Projeto_RPM\
+
+Project Files:
+    RPM_METER.c                                             [18-out-21 10:50  CRC=428B1FC1]
+    RPM_METER.h                                             [18-out-21 10:00  CRC=A36ADD1B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h [06-jan-21 18:55  CRC=C3D160C1]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=4D13CCB1
+Program memory checksum=0000
+Hex file CRC=C76E
+
+Units:
+    C:\Users\wvair\Dropbox\CEFET\4AATMINT_2021_1\Sistemas De Controle Digitais\Aula_12 18OUT21\Projeto_RPM\RPM_METER (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   RPM_METER.xsym
+    Errors:      RPM_METER.err
+    Ext Symbols: RPM_METER.esym
+    INHX32:      RPM_METER.hex
+    Symbols:     RPM_METER.sym
+    List:        RPM_METER.lst
+    Debug/COFF:  RPM_METER.cof
+    Project:     RPM_METER.ccspjt
+    Call Tree:   RPM_METER.tre
+    Statistics:  RPM_METER.STA
