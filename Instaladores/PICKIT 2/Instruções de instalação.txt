@@ -1,0 +1,4 @@
+Instale executando o "setup.exe", depois da instalação, copie o arquivo "PK2DeviceFile.dat"
+sobre o antigo, no diretório de instalação do Pickit 2, por exemplo:
+"C:\Program Files (x86)\Microchip\PICkit 2 v2", caso o seu sistema seja de 64 bits 
+ou "C:\Program Files\Microchip\PICkit 2 v2" se for de 32 bits.

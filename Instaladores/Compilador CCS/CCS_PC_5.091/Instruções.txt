@@ -1,0 +1,33 @@
+Olá Muito Obrigado pela Preferência!
+
+Instale o programa normalmente através do arquivo CCS v5.091 Setup, pode instalar sem se preocupar
+com nenhuma configuração extra.
+
+Concluida a instalação , feche o Programa por completo.
+
+Agora vamos a validação...
+
+Copie os arquivos contidos na pasta Arquivos de Validação para o diretório de instalação do programa
+normalmente localizado em :
+
+Meu Computador\ Disco C:\Arquivos de Programas (x86)\PICC 
+ou
+Meu Computador\ Disco C:\Arquivos de Programas\PICC
+
+
+Após localizar basta colar neste diretório.
+
+
+Pronto Programa instalado , validado sem restrições e sem limites para a utilização!!!
+
+Apenas evite atualizar e Assim terá o programa Pelo tempo que desejar.
+
+Mesmo assim caso haja dificuldades na instalação envie-nos um email , que agendaremos o suporte
+gratuito via Teamviewer para Lhe auxiliarmos.
+
+"Um Forte e Cordial Abraço!!!"
+
+Att.
+Antonio
+TECH SISTEM
+techsistembr@outlook.com
