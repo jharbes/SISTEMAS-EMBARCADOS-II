@@ -1,0 +1,5 @@
+Compiling G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\6-Aula - 22MAI23-Frequencímetro\Projeto_RPM\RPM_METER on 04-jun-23 at 20:04
+>>> Warning 216 "G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\6-Aula - 22MAI23-Frequencímetro\Projeto_RPM\RPM_METER.c" Line 132(1,2): Interrupts disabled during call to prevent re-entrancy:  (tick_difference)
+      Memory usage:   ROM=12%      RAM=6% - 8%
+      0 Errors,  1 Warnings.
+Build Successful.

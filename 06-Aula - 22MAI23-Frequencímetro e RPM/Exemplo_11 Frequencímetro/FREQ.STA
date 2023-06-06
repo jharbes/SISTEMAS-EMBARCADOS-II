@@ -1,0 +1,64 @@
+
+ROM used:   1380/32768 (4%)
+            1380/32768 (4%) including unused fragments
+
+            1.0 Average locations per line
+            11.3 Average locations per statement
+
+RAM used:   38/1536 (2%) at main() level
+            61/1536 (4%) worst case
+
+Stack used: 6 worst case (5 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   82    22  18  FREQ.c
+   22     0   0  FREQ.h
+  879     0   0  C:\Program Files (x86)\PICC\Devices\18F4520.h
+  456   100  82  C:\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1439   122 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     24   1    1             @delay_ms1
+0     72   3    3    760  4.5  lcd_read_byte
+0     82   3    2    262  3.7  lcd_read_nibble
+0     60   2    1    399  2.4  lcd_send_nibble
+0     70   3    3    415  3.7  lcd_send_byte
+0    124   4    6    852  6.2  lcd_init
+0     34   1    4    208  6.3  lcd_gotoxy
+0     84   3    1    354  4.7  lcd_putc
+0     22   1    0     17  1.3  TIMER0_isr
+0      8   0    0     22  1.2  TIMER1_isr
+0    212   8    2    521  4.2  MAIN
+0     18   1    0             @const774
+0     34   1    2             @PSTRINGC_754
+0     16   1    0             @const779
+0     30   1    3             @PSTRINGCN_754
+0    142   5   13             @DIV3232
+0    166   6   12             @PRINTF_L32U_754
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              122
+    Comments                301
+    Volume (V)              5866
+    Difficulty (D)          37.8
+    Effort to implement (E) 221935
+    Time to implement (T)   3 hours, 25 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    137
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000B8   178  0  
+000BA-07FFE  1198  31384  
+
+
+

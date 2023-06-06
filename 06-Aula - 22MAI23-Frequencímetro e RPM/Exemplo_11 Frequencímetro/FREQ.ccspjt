@@ -1,0 +1,164 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=99
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=FREQ.hex
+Development_Mode=
+Processor_Text=PIC18F4520
+ToolSuite=CCS
+CCSVersion=5.099
+Compiler=PCH
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+FileList=FREQ.c
+
+[FREQ.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=FREQ.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[ProjectLog]
+Days=7
+D1=06-10-2021
+D1_L=7
+D1_L1=[73266]Project Closed.
+D1_L2=[73266]Project Opened.
+D1_L3=[73277]Started Editing.
+D1_L4=[73677]Stopped Editing.
+D1_L5=[73987]Started Editing.
+D1_L6=[74606]Stopped Editing.
+TotalEdit=264
+TotalDebug=0
+D1_E=7
+D1_D=0
+D1_L7=[83644]Project Closed.
+D2=07-10-2021
+D2_L=16
+D2_L1=[36557]Project Opened.
+D2_L2=[36652]Started Editing.
+D2_L3=[38495]Stopped Editing.
+D2_L4=[45203]Started Editing.
+D2_L5=[46722]Stopped Editing.
+D2_L6=[48954]Started Editing.
+D2_L7=[55992]Stopped Editing.
+D2_E=175
+D2_D=0
+D2_L8=[55992]Project Closed.
+D2_L9=[56035]Project Opened.
+D2_L10=[56047]Project Closed.
+D2_L11=[72223]Project Opened.
+D2_L12=[72259]Project Closed.
+D2_L13=[72269]Project Opened.
+D2_L14=[72580]Started Editing.
+D2_L15=[73229]Stopped Editing.
+D2_L16=[73229]Project Closed.
+D3=14-10-2021
+D3_L=8
+D3_L1=[51513]Project Opened.
+D3_L2=[51594]Started Editing.
+D3_L3=[53403]Stopped Editing.
+D3_E=41
+D3_D=0
+D3_L4=[53403]Project Closed.
+D3_L5=[67591]Project Opened.
+D3_L6=[68989]Started Editing.
+D3_L7=[69568]Stopped Editing.
+D3_L8=[69568]Project Closed.
+D4=18-10-2021
+D4_L=10
+D4_L1=[27955]Project Opened.
+D4_L2=[29234]Started Editing.
+D4_L3=[29538]Stopped Editing.
+D4_L4=[29574]Started Editing.
+D4_L5=[29876]Stopped Editing.
+D4_L6=[30861]Started Editing.
+D4_L7=[31211]Stopped Editing.
+D4_L8=[31439]Started Editing.
+D4_L9=[31751]Stopped Editing.
+D4_E=2
+D4_D=0
+D4_L10=[35867]Project Closed.
+D5=28-01-2022
+D5_L=6
+D5_L1=[69874]Project Opened.
+D5_L2=[70178]Started Editing.
+D5_L3=[70506]Stopped Editing.
+D5_L4=[71093]Started Editing.
+D5_L5=[71480]Stopped Editing.
+D5_E=2
+D5_D=0
+D5_L6=[71807]Project Closed.
+D6=17-11-2022
+D6_L=6
+D6_L1=[54184]Project Opened.
+D6_L2=[54695]Started Editing.
+D6_L3=[56525]Stopped Editing.
+D6_E=31
+D6_D=0
+D6_L4=[56525]Project Closed.
+D6_L5=[57690]Project Opened.
+D6_L6=[57742]Project Closed.
+D7=22-05-2023
+D7_L=4
+D7_L1=[49141]Project Opened.
+D7_L2=[49519]Started Editing.
+D7_L3=[49862]Stopped Editing.
+D7_E=6
+D7_D=0
+D7_L4=[49862]Project Closed.
+
+[Opened Files]
+1=FREQ.c
+t1=52
+Count=2
+2=FREQ.h
+t2=1
+3=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h
+t3=1
+4=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t4=1
+[Units]
+Count=1
+1=FREQ (main)

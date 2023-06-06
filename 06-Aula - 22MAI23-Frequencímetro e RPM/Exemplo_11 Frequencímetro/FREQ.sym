@@ -1,0 +1,146 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01C freq
+01D-020 overflow_timer0
+021.0   T1_contando
+022-023 @sprintf_string
+024-027 @PRINTF_L32U_754.P1
+024     @PSTRINGCN_754.P2
+024     lcd_init.i
+024     MAIN.@SCRATCH1
+024     @PSTRINGC_754.@SCRATCH1
+025-028 lcd_init.LCD_INIT_STRING
+025     MAIN.@SCRATCH2
+025     @PSTRINGC_754.@SCRATCH2
+025     @PSTRINGCN_754.@SCRATCH1
+026     @PSTRINGCN_754.@SCRATCH2
+028     @PRINTF_L32U_754.@SCRATCH1
+029     @delay_ms1.P1
+029     lcd_init.@SCRATCH1
+029     @PRINTF_L32U_754.@SCRATCH2
+02A     @PRINTF_L32U_754.@SCRATCH3
+02B     @PRINTF_L32U_754.@SCRATCH4
+02C     @PRINTF_L32U_754.@SCRATCH5
+02D     @PRINTF_L32U_754.@SCRATCH6
+02E     @PRINTF_L32U_754.@SCRATCH7
+02F     @PRINTF_L32U_754.@SCRATCH8
+030-033 @DIV3232.P1
+030     lcd_putc.c
+031     lcd_gotoxy.x
+032     lcd_gotoxy.y
+033     lcd_gotoxy.address
+034-037 @DIV3232.P1
+034     lcd_gotoxy.@SCRATCH1
+035     lcd_send_byte.address
+036     lcd_send_byte.n
+037     lcd_read_byte.low
+037     lcd_send_byte.@SCRATCH1
+038     lcd_send_nibble.n
+038     lcd_read_byte.high
+038     @DIV3232.@SCRATCH1
+039     lcd_read_nibble.n
+039     lcd_read_byte.@SCRATCH1
+039     @DIV3232.@SCRATCH2
+03A     lcd_read_nibble.@SCRATCH1
+03A     @DIV3232.@SCRATCH3
+03B     @DIV3232.@SCRATCH4
+03C     @DIV3232.@SCRATCH5
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000BA  TIMER0_isr
+0000D0  TIMER1_isr
+0000D8  @const774.call
+0000EA  @const779.call
+0000FA  @delay_ms1
+000112  lcd_send_nibble
+00014E  lcd_read_nibble
+0001A0  lcd_read_byte
+0001E8  lcd_send_byte
+00022E  lcd_init
+0002AA  lcd_gotoxy
+0002CC  lcd_putc
+000320  @PSTRINGC_754
+000342  @PSTRINGCN_754
+000360  @DIV3232
+0003EE  @PRINTF_L32U_754
+000494  @cinit1
+000494  MAIN
+0004C4  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\6-Aula - 22MAI23-Frequencímetro\Exemplo_11 Frequencímetro\
+
+Project Files:
+    FREQ.c                                                  [22-mai-23 13:49  CRC=16406B2D]
+    FREQ.h                                                  [17-nov-22 15:41  CRC=E2F4EA4B]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=6053254D
+Program memory checksum=0000
+Hex file CRC=9032
+
+Units:
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\6-Aula - 22MAI23-Frequencímetro\Exemplo_11 Frequencímetro\FREQ (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   FREQ.xsym
+    Errors:      FREQ.err
+    Ext Symbols: FREQ.esym
+    INHX32:      FREQ.hex
+    Symbols:     FREQ.sym
+    List:        FREQ.lst
+    Debug/COFF:  FREQ.cof
+    Project:     FREQ.ccspjt
+    Call Tree:   FREQ.tre
+    Statistics:  FREQ.STA
