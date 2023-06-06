@@ -1,0 +1,22 @@
+#include <PWM.h>
+
+void main()
+{
+	setup_adc_ports(NO_ANALOGS, VSS_VDD);
+
+	while(TRUE)
+	{
+
+	pwm_on(MOTOR_1);
+	pwm_on(MOTOR_2);
+ 	
+	delay_ms(2000);
+	pwm_off(MOTOR_1);
+	delay_ms(2000);
+	pwm_off(MOTOR_2);
+	delay_ms(2000);
+ 	
+
+	}
+
+}

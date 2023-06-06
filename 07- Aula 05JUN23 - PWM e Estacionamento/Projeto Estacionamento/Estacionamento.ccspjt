@@ -1,0 +1,140 @@
+[Directories]
+Include=<default>
+Library=
+LinkerScript=
+output=
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=85
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+expandtree=0
+[PROJECT]
+Target=Estacionamento.hex
+Development_Mode=
+Processor_Text=PIC18F46K22
+ToolSuite=CCS
+CCSVersion=5.099
+Compiler=PCH
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+FileList=Estacionamento.c
+[FREQ.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=Estacionamento.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=Estacionamento.c
+2=Estacionamento.h
+3=C:\Program Files (x86)\PICC\Devices\18F4550.h
+4=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+5=
+6=
+t1=33
+t2=17
+Count=3
+t3=1
+[Estacionamento.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[CompilerVersion]
+Fixed=
+
+[ProjectLog]
+Days=3
+D1=19-05-2019
+D1_L=10
+D1_L1=[82711]Project Opened.
+D1_L2=[82785]Started Editing.
+D1_L3=[82912]Stopped Editing.
+TotalEdit=113
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L4=[83184]Project Closed.
+D1_L5=[83565]Project Opened.
+D1_L6=[83762]Project Closed.
+D1_L7=[83827]Project Opened.
+D1_L8=[83828]Project Closed.
+D1_L9=[83829]Project Opened.
+D1_L10=[83899]Project Closed.
+D2=16-09-2021
+D2_L=30
+D2_L1=[55126]Project Opened.
+D2_L2=[55202]Started Editing.
+D2_L3=[55301]Stopped Editing.
+D2_E=64
+D2_D=0
+D2_L4=[55388]Started Editing.
+D2_L5=[55787]Project Opened.
+D2_L6=[55911]Started Editing.
+D2_L7=[58005]Stopped Editing.
+D2_L8=[58019]Started Editing.
+D2_L9=[58320]Stopped Editing.
+D2_L10=[60306]Started Editing.
+D2_L11=[61188]Stopped Editing.
+D2_L12=[61386]Started Editing.
+D2_L13=[61975]Stopped Editing.
+D2_L14=[63016]Started Editing.
+D2_L15=[63737]Stopped Editing.
+D2_L16=[66011]Started Editing.
+D2_L17=[66312]Stopped Editing.
+D2_L18=[66486]Project Closed.
+D2_L19=[68124]Project Opened.
+D2_L20=[68595]Started Editing.
+D2_L21=[68623]Stopped Editing.
+D2_L22=[68735]Started Editing.
+D2_L23=[69036]Stopped Editing.
+D2_L24=[69549]Started Editing.
+D2_L25=[69657]Stopped Editing.
+D2_L26=[69657]Project Closed.
+D2_L27=[69684]Project Opened.
+D2_L28=[70434]Started Editing.
+D2_L29=[70816]Stopped Editing.
+D2_L30=[70816]Project Closed.
+D3=04-06-2023
+D3_L=10
+D3_L1=[74069]Project Opened.
+D3_L2=[74445]Started Editing.
+D3_L3=[74745]Stopped Editing.
+D3_L4=[77053]Started Editing.
+D3_L5=[78341]Stopped Editing.
+D3_E=46
+D3_D=0
+D3_L6=[78341]Project Closed.
+D3_L7=[78385]Project Opened.
+D3_L8=[78433]Started Editing.
+D3_L9=[79826]Stopped Editing.
+D3_L10=[79827]Project Closed.
+[Units]
+Count=1
+1=Estacionamento (main)

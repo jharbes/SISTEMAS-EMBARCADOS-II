@@ -1,0 +1,107 @@
+/////////////////////////////////////////////////////////////////////////
+////                         Estacionamento.c                        ////
+/////////////////////////////////////////////////////////////////////////
+
+#include "Estacionamento.h"
+#include <lcd.c>
+
+
+void abre_entrada(void);
+void fecha_entrada(void);
+void abre_saida(void);
+void fecha_saida(void);
+
+int vagas=20;
+short int lotado;
+
+#INT_EXT
+void  EXT_isr(void)
+{
+if(lotado==0) abre_entrada();
+vagas--;
+lcd_gotoxy(1,2);
+printf(LCD_PUTC, "VAGAS=%u   ",vagas);
+if(vagas==0) lotado=1;
+while (!input(SENSOR_ENTRADA));
+fecha_entrada();
+}
+
+#INT_EXT1
+void  EXT1_isr(void) 
+{
+abre_saida();
+while (!input(SENSOR_SAIDA));
+fecha_saida();
+vagas++;
+lcd_gotoxy(1,2);
+printf(LCD_PUTC, "VAGAS=%u   ",vagas);
+}
+
+
+void main() {
+   
+   setup_oscillator(OSC_8MHZ);
+   
+   enable_interrupts(INT_EXT);
+   enable_interrupts(INT_EXT1);
+   enable_interrupts(GLOBAL);
+   
+   lcd_init();
+   
+   lcd_putc("\fEstacionamento");      //Início
+   lcd_gotoxy(1,2);
+   printf(LCD_PUTC, "VAGAS=%u",vagas);
+   
+   fecha_entrada();
+   fecha_saida();
+
+   while (TRUE) {
+ 
+   
+
+
+   }
+}
+
+
+
+void abre_entrada(void){
+int i;
+for (i=0; i<100; i++){
+	output_high(SERVO_ENTRADA);
+	delay_us(2000);
+	output_low(SERVO_ENTRADA);
+	delay_ms(30);
+	}
+}
+
+void fecha_entrada(void){
+int i;
+for (i=0; i<100; i++){
+	output_high(SERVO_ENTRADA);
+	delay_us(1000);
+	output_low(SERVO_ENTRADA);
+	delay_ms(30);
+	}
+}
+
+void abre_saida(void){
+int i;
+for (i=0; i<100; i++){
+	output_high(SERVO_SAIDA);
+	delay_us(2000);
+	output_low(SERVO_SAIDA);
+	delay_ms(30);
+	}
+}
+
+void fecha_saida(void){
+int i;
+for (i=0; i<100; i++){
+	output_high(SERVO_SAIDA);
+	delay_us(1000);
+	output_low(SERVO_SAIDA);
+	delay_ms(30);
+	}
+
+}

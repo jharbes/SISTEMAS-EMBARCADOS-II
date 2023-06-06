@@ -1,0 +1,9 @@
+#include <18F4520.h>
+#device ADC=10
+
+#FUSES NOWDT                 	//No Watch Dog Timer
+
+#use delay(internal=8000000,restart_wdt)
+
+#use pwm(CCP1,TIMER=2,FREQUENCY=10000,DUTY=50)
+

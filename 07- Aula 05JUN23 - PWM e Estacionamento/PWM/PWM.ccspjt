@@ -1,0 +1,56 @@
+[PROJECT]
+Target=PWM.hex
+Processor_Text=PIC18F4520
+CCSVerions=5.099c
+Compiler=PCH
+CCSVersion=5.099
+[Target Data]
+FileList=PWM.c
+[Directories]
+Include=
+[C:\Users\wvair\Dropbox\CEFET\Sistemas de Informação 2021.1\Sistemas Embarcados 2\8-Aula 07OUT21\PWM\PWM]
+Type=4
+[mru-list]
+1=PWM.c
+
+[Opened Files]
+1=PWM.c
+t1=1
+Count=3
+2=PWM.h
+t2=1
+3=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h
+t3=1
+[PWM.c]
+Type=4
+
+[defines]
+buildcount=47
+
+[ProjectLog]
+Days=2
+D1=07-10-2021
+D1_L=9
+D1_L1=[57492]Started Editing.
+D1_L2=[61315]Stopped Editing.
+TotalEdit=64
+TotalDebug=0
+D1_E=64
+D1_D=0
+D1_L3=[61315]Project Closed.
+D1_L4=[61437]Project Opened.
+D1_L5=[61449]Project Closed.
+D1_L6=[66454]Project Opened.
+D1_L7=[66850]Project Closed.
+D1_L8=[73261]Project Opened.
+D1_L9=[73905]Project Closed.
+D2=21-10-2021
+D2_L=2
+D2_L1=[84435]Project Opened.
+D2_L2=[84500]Project Closed.
+[Units]
+Count=1
+1=PWM (main)
+
+[fileformats]
+forcecoff=0

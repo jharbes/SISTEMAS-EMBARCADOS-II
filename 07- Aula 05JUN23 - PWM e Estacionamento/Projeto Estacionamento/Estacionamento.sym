@@ -1,0 +1,157 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     vagas
+01B.0   lotado
+01C-01D @sprintf_string
+01E     lcd_init.i
+01E     MAIN.@SCRATCH1
+01E     @PSTRINGC_825.@SCRATCH1
+01F-022 lcd_init.LCD_INIT_STRING
+01F     @PSTRINGC_825.@SCRATCH2
+023     lcd_init.@SCRATCH1
+02C     abre_entrada.i
+02C     @PRINTF_U_825.P1
+02C     abre_saida.i
+02C     fecha_saida.i
+02C     fecha_entrada.i
+02C     @PSTRINGCN_825.P1
+02C     EXT_isr.@SCRATCH1
+02D     @PRINTF_U_825.P1
+02D     @PSTRINGCN_825.@SCRATCH1
+02D     abre_entrada.@SCRATCH1
+02D     abre_saida.@SCRATCH1
+02E     @delay_us1.P1
+02E     @DIV88.P2
+02E     @PSTRINGCN_825.@SCRATCH2
+02F     lcd_putc.c
+02F     @DIV88.P1
+030     lcd_gotoxy.x
+030     @delay_ms1.P1
+030     @DIV88.@SCRATCH1
+031     lcd_gotoxy.y
+032     lcd_gotoxy.address
+033     lcd_gotoxy.@SCRATCH1
+034     lcd_send_byte.address
+035     lcd_send_byte.n
+036     lcd_read_byte.low
+036     lcd_send_byte.@SCRATCH1
+037     lcd_send_nibble.n
+037     lcd_read_byte.high
+038     lcd_read_nibble.n
+038     lcd_read_byte.@SCRATCH1
+039     lcd_read_nibble.@SCRATCH1
+F55     CCP_5_LOW
+F55     CCP_5
+F56     CCP_5_HIGH
+F58     CCP_4_LOW
+F58     CCP_4
+F59     CCP_4_HIGH
+F5E     CCP_3_LOW
+F5E     CCP_3
+F5F     CCP_3_HIGH
+F67     CCP_2
+F67     CCP_2_LOW
+F68     CCP_2_HIGH
+F78.6   C2OUT
+F79.6   C1OUT
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000BA  @delay_ms1
+0000E0  @delay_us1
+0000FE  abre_entrada
+000130  lcd_read_nibble
+000182  lcd_read_byte
+0001CA  lcd_send_nibble
+00020A  lcd_send_byte
+000250  lcd_gotoxy
+000272  lcd_putc
+0002C2  @PSTRINGCN_825
+0002E0  @DIV88
+000308  @PRINTF_U_825
+00036E  fecha_entrada
+000390  EXT_isr
+000406  @const840.call
+000412  abre_saida
+000444  fecha_saida
+000466  EXT1_isr
+0004D4  @const850.call
+0004E0  @const854.call
+0004F0  @const859.call
+0004FA  lcd_init
+0005BE  @PSTRINGC_825
+0005EC  @cinit1
+0005EC  MAIN
+000614  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2021 EAD\Sistemas de Informação 2021.2\6CSINF\Sistemas Embarcados 2\5-Aula 16SET21 Prova P1\Projeto Estacionamento\
+
+Project Files:
+    Estacionamento.c                                        [04-jun-23 22:08  CRC=4D319844]
+    Estacionamento.h                                        [04-jun-23 22:06  CRC=897DF91E]
+    C:\Program Files (x86)\PICC\Devices\18F46K22.h          [06-jan-21 18:55  CRC=237D2B2B]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=9D792BA1
+Program memory checksum=F71E
+Hex file CRC=8032
+
+Units:
+    G:\Meu Drive\CEFET 2021 EAD\Sistemas de Informação 2021.2\6CSINF\Sistemas Embarcados 2\5-Aula 16SET21 Prova P1\Projeto Estacionamento\Estacionamento (main)
+
+Compiler Settings:
+    Processor:      PIC18F46K22
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Estacionamento.xsym
+    Errors:      Estacionamento.err
+    Ext Symbols: Estacionamento.esym
+    INHX32:      Estacionamento.hex
+    Symbols:     Estacionamento.sym
+    List:        Estacionamento.lst
+    Debug/COFF:  Estacionamento.cof
+    Project:     Estacionamento.ccspjt
+    Call Tree:   Estacionamento.tre
+    Statistics:  Estacionamento.STA

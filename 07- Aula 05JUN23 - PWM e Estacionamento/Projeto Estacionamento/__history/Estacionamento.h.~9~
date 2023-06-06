@@ -1,0 +1,39 @@
+#include <18F46K22.h>
+
+#FUSES INTRC_IO		//Internal RC Osc, no CLKOUT
+#FUSES MCLR				// pino de Master Clear ativo									 	
+
+#use delay(int=8000000)
+
+
+// acesso aos pinos:
+#define LCD_ENABLE_PIN  PIN_E1
+#define LCD_RS_PIN      PIN_E0
+#define LCD_RW_PIN      PIN_E2
+#define LCD_DATA4       PIN_D4
+#define LCD_DATA5       PIN_D5
+#define LCD_DATA6       PIN_D6
+#define LCD_DATA7       PIN_D7 
+
+
+#define SERVO_ENTRADA   PIN_B7
+#define SERVO_SAIDA     PIN_B6
+
+
+#define SENSOR_ENTRADA   PIN_B4
+#define SENSOR_SAIDA     PIN_B5
+
+#rom 0xf00000={3,10,20,30,40}     //inserts this data into the hex file.
+
+                              //The data eeprom address differs for different
+
+                               // family of devices.  Please refer to the 
+
+                               //programming specs to find the value for the device.
+
+
+// Protótipos das funções
+void abre_entrada(void);
+void fecha_entrada(void);
+void abre_saida(void);
+void fecha_saida(void);

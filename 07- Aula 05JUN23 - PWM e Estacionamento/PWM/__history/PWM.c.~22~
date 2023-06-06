@@ -1,0 +1,43 @@
+#include <PWM.h>
+int8 i;
+int16 ajuste_pwm_1;
+int16 ajuste_pwm_2;
+
+
+void main()
+{
+	setup_adc_ports(NO_ANALOGS, VSS_VDD);
+
+	while(TRUE)
+	{
+
+//!	pwm_on(MOTOR_1);
+//!	pwm_on(MOTOR_2);
+//! 	
+//!	delay_ms(2000);
+//!	pwm_off(MOTOR_1);
+//!	delay_ms(2000);
+//!	pwm_off(MOTOR_2);
+//!	delay_ms(2000);
+	pwm_off(MOTOR_2);
+ 	
+	pwm_on(MOTOR_1);
+//!	pwm_set_duty_percent(MOTOR_1,700);
+//!	delay_ms(1000);
+ 	
+	for(i=1; i<= 10; i++){
+	pwm_set_duty_percent(MOTOR_1,i*100);
+	delay_ms(100);
+	}
+	pwm_off(MOTOR_1);
+ 	
+//!	pwm_on(MOTOR_2);
+//!	for(ajuste_pwm_2= 10; ajuste_pwm_2 <= 100; ajuste_pwm_2 =+ 10){
+//!	pwm_set_duty_percent(MOTOR_2,ajuste_pwm_2);
+//!	delay_ms(100);
+//!	}
+//!	pwm_off(MOTOR_2);
+ 	
+	}
+
+}

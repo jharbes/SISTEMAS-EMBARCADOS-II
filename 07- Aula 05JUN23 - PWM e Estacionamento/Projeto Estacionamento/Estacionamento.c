@@ -1,0 +1,100 @@
+/////////////////////////////////////////////////////////////////////////
+////                         Estacionamento.c                        ////
+/////////////////////////////////////////////////////////////////////////
+
+#include "Estacionamento.h"
+#include <lcd.c>
+
+int vagas=10;
+short int lotado;
+
+#INT_EXT
+void  EXT_isr(void)
+{
+if(lotado==0) abre_entrada();
+while (!input(SENSOR_ENTRADA));// aguarda o sensor de entrada registrar a passagem do carro
+vagas--;// decrementa o número de vagas disponíveis
+write_eeprom(0,vagas);// salva o número de vagas na eeprom interna no endereço 0
+lcd_gotoxy(1,2);
+printf(LCD_PUTC, "VAGAS=%u   ",vagas);
+if(vagas==0) lotado=1;
+fecha_entrada();
+}
+
+#INT_EXT1
+void  EXT1_isr(void) 
+{
+abre_saida();
+while (!input(SENSOR_SAIDA));// aguarda o sensor de saída registrar a passagem do carro
+fecha_saida();
+vagas++;
+write_eeprom(0,vagas);// salva o número de vagas na eeprom interna
+lcd_gotoxy(1,2);
+printf(LCD_PUTC, "VAGAS=%u   ",vagas);
+}
+
+
+void main() {
+   
+   enable_interrupts(INT_EXT);
+   enable_interrupts(INT_EXT1);
+   enable_interrupts(GLOBAL);
+ 
+if(!input(SET_VAGAS)) write_eeprom(0,5);// seta o número de vagas na eeprom interna em 5
+
+   vagas= read_eeprom(0);// inicializa o número de vagas com o valor salvo na eeprom interna endereço 0
+   
+   lcd_init();
+   lcd_putc("\fEstacionamento");      //Início
+   lcd_gotoxy(1,2);
+   printf(LCD_PUTC, "VAGAS=%u",vagas);
+   
+   fecha_entrada();
+   fecha_saida();
+
+   while (TRUE) {
+		delay_ms(10);
+  	}
+}
+
+
+
+void abre_entrada(void){// gera uma sequência de pulsos para abrir a cancela da entrada
+int i;
+for (i=0; i<20; i++){
+	output_high(SERVO_ENTRADA);
+	delay_us(1500);
+	output_low(SERVO_ENTRADA);
+	delay_ms(30);
+	}
+}
+
+void fecha_entrada(void){// gera uma sequência de pulsos para fechar a cancela da entrada
+int i;
+for (i=0; i<20; i++){
+	output_high(SERVO_ENTRADA);
+	delay_us(2000);
+	output_low(SERVO_ENTRADA);
+	delay_ms(30);
+	}
+}
+
+void abre_saida(void){// gera uma sequência de pulsos para abrir a cancela da saída
+int i;
+for (i=0; i<20; i++){
+	output_high(SERVO_SAIDA);
+	delay_us(1500);
+	output_low(SERVO_SAIDA);
+	delay_ms(30);
+	}
+}
+
+void fecha_saida(void){// gera uma sequência de pulsos para fechar a cancela da saída
+int i;
+for (i=0; i<20; i++){
+	output_high(SERVO_SAIDA);
+	delay_us(2000);
+	output_low(SERVO_SAIDA);
+	delay_ms(30);
+	}
+}
