@@ -1,0 +1,190 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 Vin_0
+008-00B Vin_1
+00C-00F Vin_2
+010-013 V_0
+014-017 V_1
+018-01B V_2
+01C-01D @sprintf_string
+01E-01F @ITOF.P1
+01E-021 @PRINTF_L32D_733FPFPFR.P2
+01E     @PSTRINGCN_770.P3
+01E-021 @PRINTF_L32D_770FPFPFR.P4
+01E     @PSTRINGCN_733.P5
+01E     lcd_init.i
+01E     MAIN.@SCRATCH1
+01E     @PSTRINGC_770.@SCRATCH1
+01E     @PSTRINGC_9600_31766_31767.@SCRATCH1
+01E     @PSTRINGC_737.@SCRATCH1
+01F-022 lcd_init.LCD_INIT_STRING
+01F     MAIN.@SCRATCH2
+01F     @PSTRINGC_770.@SCRATCH2
+01F     @PSTRINGC_9600_31766_31767.@SCRATCH2
+01F     @PSTRINGCN_733.@SCRATCH1
+01F     @PSTRINGCN_770.@SCRATCH1
+01F     @PSTRINGC_737.@SCRATCH2
+020     @PUTCHAR_3_.P1
+020     MAIN.@SCRATCH3
+020     @PSTRINGCN_733.@SCRATCH2
+020     @PSTRINGCN_770.@SCRATCH2
+021     MAIN.@SCRATCH4
+022-025 @DIVFF.P1
+022     @PRINTF_L32D_770FPFPFR.P2
+022     @PRINTF_L32D_733FPFPFR.P3
+023     lcd_init.@SCRATCH1
+023     @PRINTF_L32D_733FPFPFR.@SCRATCH1
+023     @PRINTF_L32D_770FPFPFR.@SCRATCH1
+024     @PRINTF_L32D_733FPFPFR.@SCRATCH2
+024     @PRINTF_L32D_770FPFPFR.@SCRATCH2
+025     @PRINTF_L32D_733FPFPFR.@SCRATCH3
+025     @PRINTF_L32D_770FPFPFR.@SCRATCH3
+026-029 @DIVFF.P1
+026     @PRINTF_L32D_733FPFPFR.@SCRATCH4
+026     @PRINTF_L32D_770FPFPFR.@SCRATCH4
+027     @PRINTF_L32D_733FPFPFR.@SCRATCH5
+027     @PRINTF_L32D_770FPFPFR.@SCRATCH5
+028     @PRINTF_L32D_733FPFPFR.@SCRATCH6
+028     @PRINTF_L32D_770FPFPFR.@SCRATCH6
+029     @PRINTF_L32D_733FPFPFR.@SCRATCH7
+029     @PRINTF_L32D_770FPFPFR.@SCRATCH7
+02A     @DIVFF.@SCRATCH1
+02A     @PRINTF_L32D_733FPFPFR.@SCRATCH8
+02A     @PRINTF_L32D_770FPFPFR.@SCRATCH8
+02B-02E @ADDFF.P1
+02B-02E @DIV3232.P2
+02B     lcd_putc.c
+02B-02E @MULFF.P1
+02B-02E @FTOSD.P2
+02B     @PUTCHAR_2_.P3
+02B     @DIVFF.@SCRATCH2
+02C     @delay_ms1.P1
+02C     lcd_gotoxy.x
+02C     @DIVFF.@SCRATCH3
+02D     lcd_gotoxy.y
+02D     @DIVFF.@SCRATCH4
+02E     lcd_gotoxy.address
+02E     @DIVFF.@SCRATCH5
+02F-032 @MULFF.P1
+02F-032 @DIV3232.P2
+02F-032 @ADDFF.P3
+02F     lcd_gotoxy.@SCRATCH1
+02F     @DIVFF.@SCRATCH6
+02F     @FTOSD.@SCRATCH1
+030     lcd_send_byte.address
+031     lcd_send_byte.n
+032     lcd_read_byte.low
+032     lcd_send_byte.@SCRATCH1
+033     lcd_send_nibble.n
+033     lcd_read_byte.high
+033     @MULFF.@SCRATCH1
+033     @ADDFF.@SCRATCH1
+033     @DIV3232.@SCRATCH1
+034     lcd_read_nibble.n
+034     lcd_read_byte.@SCRATCH1
+034     @MULFF.@SCRATCH2
+034     @ADDFF.@SCRATCH2
+034     @DIV3232.@SCRATCH2
+035     lcd_read_nibble.@SCRATCH1
+035     @MULFF.@SCRATCH3
+035     @ADDFF.@SCRATCH3
+035     @DIV3232.@SCRATCH3
+036     @ADDFF.@SCRATCH4
+036     @DIV3232.@SCRATCH4
+037     @ADDFF.@SCRATCH5
+037     @DIV3232.@SCRATCH5
+038     @ADDFF.@SCRATCH6
+039     @ADDFF.@SCRATCH7
+03A     @ADDFF.@SCRATCH8
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const785.call
+000012  @const798.call
+00001C  @const800.call
+000024  @const801.call
+00004A  @const815.call
+000062  @const821.call
+00006C  @const822.call
+000084  @delay_ms1
+0000B2  lcd_send_nibble
+0000F4  lcd_read_nibble
+000146  lcd_read_byte
+000192  lcd_send_byte
+0001D8  lcd_init
+000254  lcd_gotoxy
+000276  lcd_putc
+0002C6  @PSTRINGC_770
+0002E8  @ITOF
+00031E  @MULFF
+000410  @DIVFF
+00056A  @PSTRINGC_9600_31766_31767
+00058C  @PUTCHAR_2_
+0005CC  @PSTRINGCN_733
+0005EA  @ADDFF
+000854  @FTOSD
+000892  @DIV3232
+000920  @PRINTF_L32D_733FPFPFR
+000AD0  @PSTRINGCN_770
+000AF0  @PRINTF_L32D_770FPFPFR
+000CA8  @PUTCHAR_3_
+000CEA  @PSTRINGC_737
+000D0C  @cinit1
+000D0C  MAIN
+000D42  @cinit2
+
+Project Directory:
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\07- Aula 05JUN23 - PWM e Estacionamento\Projeto Caldeira\
+
+Project Files:
+    main.c                                                  [05-jun-23 20:36  CRC=83ADE283]
+    main.h                                                  [05-jun-23 20:33  CRC=6D204957]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [06-jan-21 18:55  CRC=C3D160C1]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-fev-16 09:05  CRC=D1A6378A]
+
+Source signature=57EBFBAF
+Program memory checksum=0000
+Hex file CRC=A17A
+
+Units:
+    G:\Meu Drive\CEFET 2023\Sistemas de Informação 2023_1\Sistemas Embarcados 2\07- Aula 05JUN23 - PWM e Estacionamento\Projeto Caldeira\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
